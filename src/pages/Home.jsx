@@ -67,7 +67,7 @@ export default function Home(){
             <section id="gallery" className="gallery">
                 <h2>Viví Jardín América!!!</h2>
                 <div className="image-container">
-                    <img src="images\JardinAmerica\01.jpg" alt="Imagen 1" />
+                    <img src="images/JardinAmerica/01.jpg" alt="Imagen 1" />
                     <img src="images\JardinAmerica\municipalidad.jpg" alt="Imagen 2" />
                     <img src="images\JardinAmerica\Jardin-america.jpg" alt="Imagen 3" />
                     <img src="images\JardinAmerica\fuenteagua.jpg" alt="Imagen 2" />
