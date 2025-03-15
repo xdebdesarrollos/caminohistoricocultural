@@ -22,17 +22,9 @@ function App() {
             <Routes>
                 {/* Landing Page */}
                 <Route path="/" element={<Home />} />
-
                 {/* Login 
                 <Route path="/login" element={<Login />}></Route>
-                <Route path="/crearcuenta" element={<CrearCuenta />}></Route>
-                <Route path="/landingpage" element={<LandingPage />}></Route>*/}
-
-                {/* Rutas del MENU 
-                <Route path="/materias" element={<Materias />} />
-                <Route path="/materias/crear/" element={<CrearMateria />} />
-                <Route path="/materias/editar/:nom_materia" element={<EditarMateria />} />
-                <Route path="/vehiculo/edit/:matricula" element={<VehiculoEdit />} />*/}
+                */}
                 {/* Plaza Colon*/}
                 <Route path="/plazacolon" element={<PlazaColon />}></Route>
 
