@@ -1,45 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../css/styles.css";
 
 export default function Cuerpo() {
+  const [activeSection, setActiveSection] = useState(null);
+  const [animationSpeed, setAnimationSpeed] = useState(0.6);
+  const [currentImage, setCurrentImage] = useState(0);
+
   const images = [
-    "./images/CristoDeLaHermandad/img1.jpg",
-    "./images/CristoDeLaHermandad/img2.jpg",
-    "./images/CristoDeLaHermandad/img3.jpg",
+    "./images/CristoDeLaAmistad/img1.jpg",
+    "./images/CristoDeLaAmistad/img2.jpg",
+    "./images/CristoDeLaAmistad/img3.jpg",
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [activeSection, setActiveSection] = useState(null);
-  const [animationSpeed, setAnimationSpeed] = useState(0.6);  // Velocidad de la animación
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
-  // Funciones para el carrusel de imágenes
-  function showSlide(index) {
-    const totalSlides = images.length;
-    setCurrentSlide((index + totalSlides) % totalSlides);
-  }
+  const handlePrevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+  };
 
-  function prevSlide() {
-    showSlide(currentSlide - 1);
-  }
-
-  function nextSlide() {
-    showSlide(currentSlide + 1);
-  }
+  const handleNextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  };
 
   // Variantes de animación
-  const sectionVariants = {
-    hidden: { opacity: 0, y: 50, x: "100%" }, // Para el carrusel (aparece desde la derecha)
-    visible: { opacity: 1, y: 0, x: 0 },
-    exit: { opacity: 0, y: -50, x: "-100%" }, // Se oculta de la parte superior
-  };
-
-  const carouselVariants = {
-    hidden: { opacity: 0, x: "-100%" }, // Aparece desde la izquierda
-    visible: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: "-100%" }, // Se oculta hacia la izquierda
-  };
-
   const audioVariants = {
     hidden: { opacity: 0, x: "100%" }, // Aparece desde la derecha
     visible: { opacity: 1, x: 0 },
@@ -57,26 +46,46 @@ export default function Cuerpo() {
       {/* Íconos de selección */}
       <div className="icon-container">
         <button onClick={() => setActiveSection("carousel")}>
-          <img src="./images/icons/carousel.png" alt="Carrusel" />
+          <img src="./images/icons/carpetadeimagenes.png" alt="Carrusel" /><div>Imágenes</div>
         </button>
         <button onClick={() => setActiveSection("audio")}>
-          <img src="./images/icons/audio.png" alt="Audio" />
+          <img src="./images/icons/audio.png" alt="Audio" /><div>Audio</div>
         </button>
         <button onClick={() => setActiveSection("video")}>
-          <img src="./images/icons/video.png" alt="Videos" />
+          <img src="./images/icons/videos.png" alt="Videos" /><div>Videos</div>
         </button>
       </div>
 
       {/* Sección de Información (Fija) */}
       <div className="info">
-        <h2>Bienvenidos al Cristo de la Hermandad</h2>
-        <p style={{ color: "white" }}>
-          El Cristo de la Hermandad, una obra maestra del escultor chileno Luis Javín Sizzara, 
+        <h2>Bienvenidos al Cristo de la Amistad</h2>
+        <p style={{ color: "black" }}>
+          El Cristo de la Amistad, una obra maestra del escultor chileno Luis Javín Sizzara, 
           se yergue imponente en la ciudad de Jardín América, Misiones. Tallada en madera, 
           esta majestuosa escultura representa una figura de Cristo crucificado, símbolo de fe y 
           esperanza para la comunidad.
         </p>
       </div>
+
+      {/* Sección de Carrusel */}
+      {activeSection === "carousel" && (
+        <motion.div
+          className="carousel-section"
+          variants={videoVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{ duration: animationSpeed }}
+        >
+          <h3 style={{ color: "black", textAlign: "center" }}>Galería de imágenes</h3>
+          <div className="carousel-container">
+            <button className="carousel-btn prev" onClick={handlePrevImage}>❮</button>
+            <img src={images[currentImage]} alt={`Imagen ${currentImage + 1}`} className="carousel-image" />
+            <button className="carousel-btn next" onClick={handleNextImage}>❯</button>
+          </div>
+          <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
+        </motion.div>
+      )}
 
       {/* Sección de Videos */}
       {activeSection === "video" && (
@@ -88,14 +97,14 @@ export default function Cuerpo() {
           exit="exit"
           transition={{ duration: animationSpeed }}
         >
-          <h3>Disfruta de estos videos sobre el Cristo de la Hermandad</h3>
+          <h3 style={{ color: "black", textAlign: "center" }}>Disfruta de estos videos sobre el Cristo de la Amistad</h3>
           <div className="video-container">
             {/* Video 1 */}
             <div className="video">
               <iframe 
                 width="560" 
                 height="315" 
-                src="https://www.youtube.com/embed/your_video_id" 
+                src="https://www.youtube.com/embed/dZMe4K4-gRA" 
                 title="YouTube video player" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -107,7 +116,7 @@ export default function Cuerpo() {
               <iframe 
                 width="560" 
                 height="315" 
-                src="https://www.youtube.com/embed/your_video_id" 
+                src="https://www.youtube.com/embed/e-QmTZxi0l8" 
                 title="YouTube video player" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -115,37 +124,8 @@ export default function Cuerpo() {
               ></iframe>
             </div>
           </div>
-          <button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button>
-        </motion.div>
-      )}
-
-      {/* Carrusel de Imágenes */}
-      {activeSection === "carousel" && (
-        <motion.div
-          className="carousel"
-          variants={carouselVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          transition={{ duration: animationSpeed }}
-        >
-          <button className="carousel-btn prev" onClick={prevSlide}>
-            &#10094;
-          </button>
-          <div className="carousel-container">
-            <div
-              className="carousel-slides"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {images.map((src, index) => (
-                <img key={index} src={src} alt={`Foto ${index + 1}`} />
-              ))}
-            </div>
-          </div>
-          <button className="carousel-btn next" onClick={nextSlide}>
-            &#10095;
-          </button>
-          <button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button>
+          <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
+          
         </motion.div>
       )}
 
@@ -159,12 +139,12 @@ export default function Cuerpo() {
           exit="exit"
           transition={{ duration: animationSpeed }}
         >
-          <h3>Escucha la historia del Cristo de la Hermandad</h3>
+          <h3>Escucha la historia del Cristo de la Amistad</h3>
           <audio controls>
-            <source src="https://via.placeholder.com/audio.mp3" type="audio/mpeg" />
+            <source src="./audio/CristoDeLaAmistad.mp3" type="audio/mpeg" />
             Tu navegador no soporta el elemento de audio.
           </audio>
-          <button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button>
+          <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
         </motion.div>
       )}
     </section>

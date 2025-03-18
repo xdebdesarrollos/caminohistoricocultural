@@ -16,8 +16,8 @@ export default function Home() {
           Tu navegador no soporta videos en HTML5.
         </video>
         <div className="overlay">
-          <h1>Camino Histórico/Cultural</h1>
-          <p>Descubrí la historia y cultura de Jardín América, Misiones</p>
+          <p className='TituloHome'>Camino Histórico/Cultural</p>
+          <p className='SubTituloHome'>Descubrí la historia y cultura de Jardín América, Misiones</p>
         </div>
       </header>
 
@@ -42,7 +42,7 @@ export default function Home() {
           viewport={{ once: false }}
         >
           <h2>{section.title}</h2>
-          <p style={{ color: "white" }}>{section.text}</p>
+          <p style={{ color: "black" }}>{section.text}</p>
         </motion.div>
       ))}
 
@@ -97,17 +97,18 @@ export default function Home() {
         <h2>Viví Jardín América!!!</h2>
         <div className="image-container">
           {["01.jpg", "municipalidad.jpg", "Jardin-america.jpg", "fuenteagua.jpg", "plazaiglesia.jpg"].map((img, index) => (
-            <motion.img
-              key={index}
-              src={`images/JardinAmerica/${img}`}
-              alt={`Imagen ${index + 1}`}
-              variants={sectionVariants}
-              initial="hidden"
-              whileInView="visible"
-              exit="exit"
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: false }}
-            />
+           <motion.img
+           key={index}
+           src={`images/JardinAmerica/${img}`}
+           alt={`Imagen ${index + 1}`}
+           variants={sectionVariants}
+           initial="hidden"
+           whileInView="visible"
+           exit="exit" 
+           viewport={{ once: false }}
+           whileTap={{ scale: 2 }} // Se agranda un poco al hacer clic
+           style={{ cursor: "pointer", borderRadius: "10px", transition: "transform 0.3s ease-in-out" }} // Opcional: mejorar la estética
+         />
           ))}
         </div>
       </motion.section>

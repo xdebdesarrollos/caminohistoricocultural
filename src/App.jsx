@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import Home from "./pages/Home";
 import PlazaColon from "./pages/PlazaColon";
-import CristoHermandad from "./pages/CristoDeLaHermandad";
+import CristoAmistad from "./pages/CristoDeLaAmistad";
 import NotFound from "./components/NotFound";
 
 //import Cabecera from './components/cabecera'
@@ -28,7 +28,7 @@ function App() {
                 {/* Plaza Colon*/}
                 <Route path="/plazacolon" element={<PlazaColon />}></Route>
 
-                <Route path="/cristohermandad" element={<CristoHermandad/>} ></Route>
+                <Route path="/cristoamistad" element={<CristoAmistad/>} ></Route>
 
                 <Route path="*" element={<NotFound />} />
             </Routes>
