@@ -4,7 +4,7 @@ export default function Cabecera(){
         <header class="cristo">
             <div class="hero-overlay">
                 <p className='TituloCristo'>Camino Histórico/Cultural</p>
-                <p className='SubTituloCristo'>Explora la historia y cultura de Jardín América, Misiones <br/> Un recorrido por el corazón cultural de nuestra ciudad </p>
+                <p className='SubTituloCristo'>Explora la historia y cultura del Cristo de la amistad <br/> Un recorrido por el corazón cultural de nuestra ciudad </p>
                 <button class="cta-btn">Explora Más</button>
             </div>
         </header>

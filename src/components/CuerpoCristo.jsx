@@ -8,9 +8,14 @@ export default function Cuerpo() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
+    "./images/CristoDeLaAmistad/img0.jpg",
     "./images/CristoDeLaAmistad/img1.jpg",
     "./images/CristoDeLaAmistad/img2.jpg",
     "./images/CristoDeLaAmistad/img3.jpg",
+    "./images/CristoDeLaAmistad/img4.jpg",
+    "./images/CristoDeLaAmistad/img5.jpg",
+    "./images/CristoDeLaAmistad/img6.jpg",
+    "./images/CristoDeLaAmistad/img7.jpg",
   ];
 
   useEffect(() => {
@@ -61,9 +66,7 @@ export default function Cuerpo() {
         <h2>Bienvenidos al Cristo de la Amistad</h2>
         <p style={{ color: "black" }}>
           El Cristo de la Amistad, una obra maestra del escultor chileno Luis Javín Sizzara, 
-          se yergue imponente en la ciudad de Jardín América, Misiones. Tallada en madera, 
-          esta majestuosa escultura representa una figura de Cristo crucificado, símbolo de fe y 
-          esperanza para la comunidad.
+          se yergue en nuestra Ciudad. La obra inicial, fue tallada en madera. Esta majestuosa escultura representa una figura de Cristo crucificado, símbolo de fe y esperanza para la comunidad.
         </p>
       </div>
 
