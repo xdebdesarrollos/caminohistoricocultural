@@ -15,7 +15,14 @@ export default function Cuerpo() {
         "./images/PlazaColon/img5.jpg",
         "./images/PlazaColon/img6.jpg",
         "./images/PlazaColon/img7.jpg",
-        "./images/PlazaColon/img8.jpg"
+        "./images/PlazaColon/img8.jpg",
+        "./images/PlazaColon/PrimeraEtapa.jpg",
+        "./images/PlazaColon/IntendJorgeMachon.jpg",
+        "./images/PlazaColon/SegundaEtapa.jpg",
+        "./images/PlazaColon/1966.jpg",
+        "./images/PlazaColon/Barquito.jpg",
+        "./images/PlazaColon/VistaAerea.jpg",
+        "./images/PlazaColon/VistaNocturna.jpg",
   ];
 
   useEffect(() => {
@@ -142,7 +149,7 @@ export default function Cuerpo() {
         >
           <h3>Escucha la historia de la Plaza Colón</h3>
           <audio controls>
-            <source src="./audio/CristoDeLaAmistad.mp3" type="audio/mpeg" />
+            <source src="./audio/PlazaColon.mp3" type="audio/mpeg" />
             Tu navegador no soporta el elemento de audio.
           </audio>
           <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>

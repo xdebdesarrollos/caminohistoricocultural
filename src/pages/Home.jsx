@@ -25,11 +25,13 @@ export default function Home() {
       {[
         {
           title: "¿Qué es el Camino Histórico/Cultural?",
-          text: "Es un recorrido interactivo a través de diferentes puntos históricos y culturales de Jardín América, conectados mediante tótems con códigos QR."
+          text: "Camino Cultural es un proyecto que busca enriquecer la experiencia turística y cultural de la ciudad de Jardín América, en la provincia de Misiones, Argentina. La iniciativa consiste en la instalación de tótems con códigos QR en diferentes puntos estratégicos de la ciudad. Al escanear estos códigos con un dispositivo móvil, los visitantes acceden a un sitio web con información relevante sobre el lugar donde se encuentran."+
+          "El sitio web asociado a cada tótem proporciona datos históricos, culturales y curiosidades sobre el punto en cuestión. Además, para incentivar la exploración, el sistema sugiere el siguiente destino dentro del recorrido, facilitando la navegación mediante Google Maps."
         },
         {
           title: "¿Por qué se desarrolla este proyecto?",
           text: "Para preservar la identidad cultural, fomentar el turismo y proporcionar una experiencia enriquecedora a residentes y visitantes."
+          
         }
       ].map((section, index) => (
         <motion.div
