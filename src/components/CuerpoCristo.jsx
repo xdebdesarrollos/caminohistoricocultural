@@ -48,6 +48,14 @@ export default function Cuerpo() {
 
   return (
     <section className="contenedor-principal">
+            {/* Sección de Información (Fija) */}
+      <div className="info">
+        <h2>Bienvenidos al Cristo de la Amistad</h2>
+        <p style={{ color: "black" }}>
+          El Cristo de la Amistad, una obra maestra del escultor chileno Luis Javín Sizzara, 
+          se yergue en nuestra Ciudad. La obra inicial, fue tallada en madera. Esta majestuosa escultura representa una figura de Cristo crucificado, símbolo de fe y esperanza para la comunidad.
+        </p>
+      </div>
       {/* Íconos de selección */}
       <div className="icon-container">
         <button onClick={() => setActiveSection("carousel")}>
@@ -59,15 +67,6 @@ export default function Cuerpo() {
         <button onClick={() => setActiveSection("video")}>
           <img src="./images/icons/videos.png" alt="Videos" /><div>Videos</div>
         </button>
-      </div>
-
-      {/* Sección de Información (Fija) */}
-      <div className="info">
-        <h2>Bienvenidos al Cristo de la Amistad</h2>
-        <p style={{ color: "black" }}>
-          El Cristo de la Amistad, una obra maestra del escultor chileno Luis Javín Sizzara, 
-          se yergue en nuestra Ciudad. La obra inicial, fue tallada en madera. Esta majestuosa escultura representa una figura de Cristo crucificado, símbolo de fe y esperanza para la comunidad.
-        </p>
       </div>
 
       {/* Sección de Carrusel */}
@@ -136,7 +135,7 @@ export default function Cuerpo() {
       {activeSection === "audio" && (
         <motion.div
           className="audio-section"
-          variants={audioVariants}
+          variants={videoVariants}
           initial="hidden"
           animate="visible"
           exit="exit"

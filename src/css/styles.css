@@ -63,14 +63,15 @@ header.hero {
 }
 
 header.plaza {
-    position: center;
-    height: 70vh;
-    left: 20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+  padding: 10%;
+  position: center;
+  height: 47vh;
+  left: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
     background: url('./images/PlazaColon/image.jpeg') no-repeat center center/cover;
 }
 header.cristo {
@@ -486,7 +487,7 @@ main {
     .info, .carousel, .audio-section {
       background: rgba(252, 154, 118, 0.352);
       color: rgb(0, 0, 0);
-      padding: 20px;
+      padding: 10px;
       margin-top: 10px;
       border-radius: 10px;
       text-align: center;
