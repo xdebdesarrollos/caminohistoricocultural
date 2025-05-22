@@ -8,7 +8,7 @@ const Cards = () => {
   const cardsData = [
     {
       title: 'Historia',
-      backText: 'Explora el pasado de Jardín América y sumérgete en una historia rica y vibrante que se remonta a principios del siglo XX.',
+      backText: 'Explora el pasado de Jardín América y sumergite en una historia rica y vibrante que se remonta a principios del siglo XX.',
       icon: 'historia.png',
     },
     {
@@ -23,7 +23,7 @@ const Cards = () => {
     },
     {
       title: 'Comunidad',
-      backText: 'Conéctate con las tradiciones locales de Jardín América, donde la unión de sus habitantes brilla en festividades, trabajos cooperativos y el legado vivo de sus raíces inmigrantes.',
+      backText: 'Conectate con las tradiciones locales de Jardín América, donde la unión de sus habitantes brilla en festividades, trabajos cooperativos y el legado vivo de sus raíces inmigrantes.',
       icon: 'comunidad.png',
     },
   ];

@@ -12,9 +12,11 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 5px;
     max-width: 1200px;
     justify-content: center;
+    align-items: center;
+    border-radius: 30px;
   }
   
   .card {
@@ -22,9 +24,14 @@ body {
     height: 380px;
     perspective: 1000px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
+    background-color: #f9f1ed;
+    padding: 20px;
+    border-radius: 30px; /* Aumentá o disminuí para que quede más redondeado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+     position: center;
   }
   
   .card-inner {
@@ -69,7 +76,7 @@ body {
   }
   
   .card-back {
-    background: linear-gradient(135deg, #65de79, #f9fbfd);
+    background: linear-gradient(135deg, #f1ede4, #f9fbfd);
     color: #000000;
     text-align: center;
     justify-content: center;

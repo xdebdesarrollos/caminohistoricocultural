@@ -1,14 +1,14 @@
 
 /* General styles */
 body {
-    background: linear-gradient(#e52e21, #85d161, #ffffff, #4fabd3);
+    background: linear-gradient(#85d161, #ffffff, #4fabd3);
     text-align: left;
     width: 100%;
 }
 
 h2 {
     color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   text-shadow:
     -1px -1px 3px #999,
     0 0 1px darkred,
@@ -30,14 +30,14 @@ h2 {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 98%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .overlay {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 2;
     width: 90%;
     height: 40%;
@@ -148,26 +148,9 @@ footer a {
 
 }
 
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 5px;
-    text-align: center;
-    
-}
-.card {
-    background: white;
-    padding: 60px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    width: 200px;
-}
+
 .card:hover {
-    transform: translateY(-10px);
+  transform: scale(1.05);
 }
 .card i {
     font-size: 40px;
@@ -192,7 +175,7 @@ footer a {
     border-radius: 10px;
     justify-content: center;
     color: #333;
-    width: 100%;
+    width: 110%;
     height: 80%;
     margin-top: 1%;
     position: center;
@@ -202,6 +185,7 @@ footer a {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    text-align: center;
 }
 .image-container img {
     width: 100%;
@@ -223,7 +207,7 @@ footer a {
 
 .hero .cta-btn {
     background-color: #46a049;
-    color: white;
+    color: rgb(111, 108, 108);
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 5px;
@@ -243,8 +227,6 @@ footer a {
 }
 
 /* Colors*/
-
-
 main {
   display: flex;
   flex-direction: column;
@@ -263,7 +245,7 @@ main {
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  position: relative;
+  position: center;
   color: color-primary-white;
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
  
@@ -395,6 +377,9 @@ main {
         bottom: 50px;
         transform: scaleX(0);
     }
+    .mapa {
+      text-align: center;
+     }
 
     /*SECCIONES CRISTO*/
     /* Contenedor principal del carrusel */
@@ -591,7 +576,7 @@ main {
 }
 
 .card.flipped {
-  transform: rotateY(180deg);
+  transform: rotateY(10deg);
 }
 
 .card-front, .card-back {
@@ -613,8 +598,6 @@ main {
 
 .card-back {
   background: #f8f8f8;
-  transform: rotateY(180deg);
+  transform: rotateY(200deg);
   padding: 10px;
 }
-
-
