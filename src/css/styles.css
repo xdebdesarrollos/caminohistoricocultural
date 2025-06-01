@@ -65,7 +65,7 @@ header.hero {
 header.plaza {
   padding: 10%;
   position: center;
-  height: 47vh;
+  height: 50vh;
   left: 20;
   display: flex;
   justify-content: center;
@@ -453,14 +453,17 @@ main {
     }
     
     .icon-container img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       transition: transform 0.2s ease;
     }
 
     .icon-container button img {
       transition: transform 0.3s ease-in-out;
       animation: heartbeat 1.5s infinite;
+    }
+     .icon-titulo {
+      font-size: 36px;
     }
     
     /*Efecto de Latido en los iconos*/
@@ -601,3 +604,18 @@ main {
   transform: rotateY(200deg);
   padding: 10px;
 }
+
+.subtitulos {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Georgia', serif;
+  color: #222;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+audio {
+        width: 800px; /* Define el ancho en píxeles */
+      }

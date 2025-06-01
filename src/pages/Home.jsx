@@ -76,7 +76,7 @@ export default function Home() {
       >
         <h2>Descubrí la historia viva en cada rincón.</h2>
         <div className="image-container">
-          {["01.jpg", "municipalidad.jpg", "Jardin-america.jpg", "fuenteagua.jpg", "plazaiglesia.jpg"].map((img, index) => (
+          {["Saltos1.jpg", "municipalidad.jpg", "Jardin-america.jpg", "fuenteagua.jpg", "plazaiglesia.jpg", "cartelnew.jpg"].map((img, index) => (
            <motion.img
            key={index}
            src={`images/JardinAmerica/${img}`}
