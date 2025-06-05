@@ -98,6 +98,18 @@ header.parroquia {
   color: white;
   background: url('./images/ParroquiaCristoRedentor/imagen.jpg') no-repeat center center/cover;
 }
+header.salto {
+  padding: 10%;
+  position: center;
+  height: 50vh;
+  left: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: url('./images/SaltosTabay/Salto7.jpg') no-repeat center center/cover;
+}
 .TituloCristo{
   font-size: 60px;
   font-weight: bold;

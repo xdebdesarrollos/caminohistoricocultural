@@ -7,11 +7,9 @@ import Home from "./pages/Home";
 import PlazaColon from "./pages/PlazaColon";
 import CristoAmistad from "./pages/CristoDeLaAmistad";
 import ParroquiaCristoR from "./pages/ParroquiaCristoR";
+import SaltoTabay from "./pages/SaltoTabay";
 import NotFound from "./components/NotFound";
 
-//import Cabecera from './components/cabecera'
-//import Pie from './components/pie'
-//import Cuerpo from './components/cuerpo';
 
 
 function App() {
@@ -32,6 +30,8 @@ function App() {
                 <Route path="/cristoamistad" element={<CristoAmistad/>} ></Route>
 
                 <Route path="/parroquiacristoredentor" element={<ParroquiaCristoR/>} ></Route>
+
+                <Route path="/saltotabay" element={<SaltoTabay/>} ></Route>
 
                 <Route path="*" element={<NotFound />} />
             </Routes>
