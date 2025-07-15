@@ -103,8 +103,8 @@ export default function Home() {
         transition={{ duration: 2, delay: 0.8 }}
         viewport={{ once: false }}
       >
-        <h2>Ubicaciones en el mapa.</h2>
-        <div>Las marcas color amarillo son los diferentes puntos ubicados en la ciudad.</div>
+        <h2>Ubicaciones de Paneles en mapa.</h2>
+        <div>Las marcas color amarillo son los diferentes paneles de información ubicados en la ciudad.</div>
         <div className="map-container">
           <iframe
             src="https://www.google.com/maps/d/embed?mid=1GswgKngHeyHmrw20zUT9AzN5yIGupVs&ehbc=2E312F"
