@@ -103,7 +103,7 @@ export default function Home() {
         transition={{ duration: 2, delay: 0.8 }}
         viewport={{ once: false }}
       >
-        <h2>Ubicaciones de Paneles en mapa.</h2>
+        <h2>Ubicaciones de Paneles informativos en mapa.</h2>
         <div>Las marcas color amarillo son los diferentes paneles de información ubicados en la ciudad.</div>
         <div className="map-container">
           <iframe
@@ -116,6 +116,40 @@ export default function Home() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Mapa del Camino Cultural"
           ></iframe>
+        </div>
+      </motion.section>
+      <motion.section
+        id="function"
+        className="function-section"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        exit="exit"
+        transition={{ duration: 2, delay: 0.8 }}
+        viewport={{ once: false }}
+      >
+        <h2 className="section-title">¿Cómo funciona?</h2>
+        
+        <div className="function-container">
+          {/* Columna izquierda: texto */}
+          <div className="function-text">
+            <p><strong>📱 Acceder a la información.</strong></p>
+            <ol>
+              <li>Abrí la cámara de tu celular o una app lectora de QR.</li>
+              <li>Apuntá al código QR que está en el panel informativo.</li>
+              <li>Tocá el enlace que aparece en pantalla.</li>
+              <li>¡Listo! Vas a acceder a contenido histórico, fotos, videos y el mapa para seguir tu recorrido.</li>
+            </ol>
+            <p>🔄 En cada estación cultural encontrarás nueva información y el camino hacia el siguiente punto.</p>
+          </div>
+
+          {/* Columna derecha: imagen */}
+          <div className="function-image">
+            <img 
+              src="/images/escaneo.png" 
+              alt="Persona escaneando el panel informativo" 
+            />
+          </div>
         </div>
       </motion.section>
       <Pie />

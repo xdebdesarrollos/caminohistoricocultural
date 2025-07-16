@@ -159,6 +159,14 @@ footer a {
     padding: 1%;
 
 }
+/* Centrar las imagenes en el pie */
+.imagen-doble {
+  display: flex;
+  gap: 60px; /* espacio entre columnas */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* permite que se acomode en móviles */
+}
 
 
 .card:hover {
@@ -624,3 +632,46 @@ main {
 audio {
         width: 800px; /* Define el ancho en píxeles */
       }
+
+/*TABLA FINAL DE LANDING CON IMAGEN*/
+.function-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+  padding-left: 90px;
+}
+
+.function-text {
+  flex: 1;
+  min-width: 400px;
+  font-size: 25px;
+  line-height: 1.6;
+  gap: 40px;
+}
+
+.function-text ol {
+  padding-left: 50px;
+  margin: 10px 0;
+}
+
+.function-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.function-image img {
+  width: 80%;
+  max-width: 330px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
