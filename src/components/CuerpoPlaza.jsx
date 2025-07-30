@@ -13,6 +13,13 @@ export default function Cuerpo() {
         "./images/PlazaColon/1966.jpg",
         "./images/PlazaColon/Barquito.jpg",
         "./images/PlazaColon/VistaAerea.jpg",
+        "./images/PlazaColon/Plaza1.jpg",
+        "./images/PlazaColon/Plaza2.jpg",
+        "./images/PlazaColon/Plaza3.jpg",
+        "./images/PlazaColon/Aerea01.jpg",
+        "./images/PlazaColon/Aerea02.jpg",
+        "./images/PlazaColon/Aerea03.jpg",
+        "./images/PlazaColon/Aerea04.jpg",
         "./images/PlazaColon/img1.jpg",
         "./images/PlazaColon/img2.jpg",
         "./images/PlazaColon/img3.jpg",
@@ -21,8 +28,6 @@ export default function Cuerpo() {
         "./images/PlazaColon/img6.jpg",
         "./images/PlazaColon/img7.jpg",
         "./images/PlazaColon/img8.jpg",
-
-        "./images/PlazaColon/VistaNocturna.jpg",
   ];
 
   useEffect(() => {
