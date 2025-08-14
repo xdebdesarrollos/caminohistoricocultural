@@ -7,8 +7,8 @@ export default function Cuerpo() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
-        "./images/PlazaColon/PrimeraEtapa.jpg",
         "./images/PlazaColon/IntendJorgeMachon.jpg",
+        "./images/PlazaColon/PrimeraEtapa.jpg",
         "./images/PlazaColon/SegundaEtapa.jpg",
         "./images/PlazaColon/1966.jpg",
         "./images/PlazaColon/Barquito.jpg",
@@ -16,6 +16,7 @@ export default function Cuerpo() {
         "./images/PlazaColon/Plaza1.jpg",
         "./images/PlazaColon/Plaza2.jpg",
         "./images/PlazaColon/Plaza3.jpg",
+        "./images/PlazaColon/Plaza4.jpg",
         "./images/PlazaColon/Aerea01.jpg",
         "./images/PlazaColon/Aerea02.jpg",
         "./images/PlazaColon/Aerea03.jpg",
@@ -28,6 +29,7 @@ export default function Cuerpo() {
         "./images/PlazaColon/img6.jpg",
         "./images/PlazaColon/img7.jpg",
         "./images/PlazaColon/img8.jpg",
+        "./images/PlazaColon/img9.jpg",
   ];
 
   useEffect(() => {

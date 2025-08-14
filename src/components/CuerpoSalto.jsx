@@ -7,6 +7,7 @@ export default function Cuerpo() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
+        "./images/SaltosTabay/Salto00.jpg",
         "./images/SaltosTabay/Salto1.jpg",
         "./images/SaltosTabay/Salto2.jpg",
         "./images/SaltosTabay/Salto3.jpg",
@@ -22,6 +23,16 @@ export default function Cuerpo() {
         "./images/SaltosTabay/Salto13.jpg",
         "./images/SaltosTabay/Salto14.jpg",
         "./images/SaltosTabay/Salto15.jpg",
+        "./images/SaltosTabay/Salto16.jpg",
+        "./images/SaltosTabay/Salto17.jpg",
+        "./images/SaltosTabay/Salto18.jpg",
+        "./images/SaltosTabay/Salto19.jpg",
+        "./images/SaltosTabay/Salto20.jpg",
+        "./images/SaltosTabay/Salto21.jpg",
+        "./images/SaltosTabay/Salto22.jpg",
+        "./images/SaltosTabay/Salto23.jpg",
+        "./images/SaltosTabay/Salto24.jpg",
+        "./images/SaltosTabay/Salto25.jpg",
   ];
 
   useEffect(() => {

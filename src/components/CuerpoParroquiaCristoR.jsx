@@ -7,6 +7,9 @@ export default function Cuerpo() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
+    "./images/ParroquiaCristoRedentor/cr01.jpg",
+    "./images/ParroquiaCristoRedentor/cr02.jpg",
+    "./images/ParroquiaCristoRedentor/cr03.jpg",
     "./images/ParroquiaCristoRedentor/img0.jpg",
     "./images/ParroquiaCristoRedentor/img1.jpg",
     "./images/ParroquiaCristoRedentor/img2.jpg",
@@ -17,6 +20,10 @@ export default function Cuerpo() {
     "./images/ParroquiaCristoRedentor/img7.jpg",
     "./images/ParroquiaCristoRedentor/img8.jpg",
     "./images/ParroquiaCristoRedentor/img9.jpg",
+    "./images/ParroquiaCristoRedentor/img10.jpg",
+    "./images/ParroquiaCristoRedentor/img11.jpg",
+    "./images/ParroquiaCristoRedentor/img12.jpg",
+    "./images/ParroquiaCristoRedentor/img13.jpg",
   ];
 
   useEffect(() => {
