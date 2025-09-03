@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,7 +15,7 @@ import NotFound from "./components/NotFound";
 function App() {
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
         <div className="container">
             <ToastContainer />
             <Routes>
@@ -36,7 +36,7 @@ function App() {
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </div>
-    </BrowserRouter>
+    </HashRouter>
 
 
 
