@@ -5,7 +5,7 @@ export default function Pie(){
             <div class="imagen-doble">
             <div>
                 <img 
-                src="/images/muni.png" 
+                src="./images/muni.png" 
                 alt="muni" 
                 width="200" 
                 height="auto"
@@ -13,7 +13,7 @@ export default function Pie(){
             </div>
             <div>
                 <img 
-                src="/images/ptzc.png" 
+                src="./images/ptzc.png" 
                 alt="parque" 
                 width="100" 
                 height="auto"
