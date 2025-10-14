@@ -146,7 +146,7 @@ export default function Home() {
           {/* Columna derecha: imagen */}
           <div className="function-image">
             <img 
-              src="/images/escaneo.png" 
+              src="/caminohistoricocultural/images/escaneo.png" 
               alt="Persona escaneando el panel informativo" 
             />
           </div>
