@@ -13,7 +13,7 @@ export default function Cuerpo() {
         "./images/PlazaColon/PrimeraEtapa.jpg",
         "./images/PlazaColon/SegundaEtapa.jpg",
         "./images/PlazaColon/1966.jpg",
-        "./images/PlazaColon/Barquito.jpg",
+        "./images/PlazaColon/barquito.jpg",
         "./images/PlazaColon/VistaAerea.jpg",
         "./images/PlazaColon/Plaza1.jpg",
         "./images/PlazaColon/Plaza2.jpg",
