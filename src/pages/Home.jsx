@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <header className="hero">
-        <video autoPlay loop muted playsInline src="/caminohistoricocultural/video/VideoLanding.mp4" type="video/mp4">
+        <video autoPlay loop muted playsInline src="video/VideoLanding.mp4" type="video/mp4">
           Tu navegador no soporta videos en HTML5.
         </video>
         <div className="overlay">

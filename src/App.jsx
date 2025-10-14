@@ -16,28 +16,15 @@ function App() {
   return (
     <>
     <HashRouter>
-        <div className="container">
-            <ToastContainer />
-            <Routes>
-                {/* Landing Page */}
-                <Route path="/" element={<Home />} />
-                {/* Login 
-                <Route path="/login" element={<Login />}></Route>
-                */}
-                {/* Plaza Colon*/}
-                <Route path="/plazacolon" element={<PlazaColon />}></Route>
-
-                <Route path="/cristoamistad" element={<CristoAmistad/>} ></Route>
-
-                <Route path="/parroquiacristoredentor" element={<ParroquiaCristoR/>} ></Route>
-
-                <Route path="/saltotabay" element={<SaltoTabay/>} ></Route>
-
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </div>
-    </HashRouter>
-
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/plazacolon" element={<PlazaColon />} />
+    <Route path="/cristoamistad" element={<CristoAmistad />} />
+    <Route path="/parroquiacristoredentor" element={<ParroquiaCristoR />} />
+    <Route path="/saltotabay" element={<SaltoTabay />} />
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+</HashRouter>
 
 
 </>
