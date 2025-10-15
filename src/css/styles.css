@@ -72,7 +72,7 @@ header.plaza {
   align-items: center;
   text-align: center;
   color: white;
-    background: url('/caminohistoricocultural/images/PlazaColon/image.jpeg') no-repeat center center/cover;
+    background: url('./images/PlazaColon/image.jpeg') no-repeat center center/cover;
 }
 header.cristo {
     padding: 10%;
@@ -84,7 +84,7 @@ header.cristo {
     align-items: center;
     text-align: center;
     color: white;
-    background: url('/caminohistoricocultural/images/CristoDeLaAmistad/image.jpg') no-repeat center center/cover;
+    background: url('./images/CristoDeLaAmistad/image.jpg') no-repeat center center/cover;
 }
 header.parroquia {
   padding: 10%;
