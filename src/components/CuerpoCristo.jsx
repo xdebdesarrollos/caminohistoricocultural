@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "../css/styles.css";
 
 export default function Cuerpo() {
+  const [activeAudio, setActiveAudio] = useState(null);
   const [activeSection, setActiveSection] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -128,24 +129,75 @@ export default function Cuerpo() {
           </motion.div>
         )}
 
-        {activeSection === "audio" && (
-          <motion.div
-            key="audio"
-            className="audio-section"
-            variants={fadeVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ duration: 0.8 }}
-          >
-            <h3>Escucha la historia del Cristo de la Amistad</h3>
-            <audio controls>
-              <source src="./audio/CristoDeLaAmistad.mp3" type="audio/mpeg" />
-              Tu navegador no soporta el elemento de audio.
-            </audio>
-            <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
-          </motion.div>
-        )}
+{/* Sección de Audio con Menú Moderno */}
+      {activeSection === "audio" && (
+        <motion.div
+          key="audio"
+          className="audio-section"
+          variants={fadeVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{ duration: 0.8 }}
+        >
+          <h3 style={{ color: "black", textAlign: "center", marginBottom: "20px" }}>🎧 Audios del Cristo de la Amistad</h3>
+
+          <div className="audio-menu">
+            {[
+              { title: "🎙 Historia", files: ["./audio/PlazaColonHistoria.mp3"] },
+              { title: "🎶 Cultura y tradición", files: ["./audio/PlazaColonCultura.mp3"] },
+              { title: "👵 Testimonios de vecinos", files: ["./audio/testimonios.mp3"] },
+              { title: "🌳 Sonidos del Cristo de la Amistad", files: ["./audio/sonidos.mp3"] },
+              { 
+                title: "🌟 Curiosidades", 
+                files: [
+                  "./audio/PlazaColonCuriosidadesCancha.mp3", 
+                  "./audio/PlazaColonCuriosidadesCarreraCaballo.mp3"   // 🔹 Nuevo audio agregado
+                ] 
+              },
+              { title: "🎓 Para las escuelas", files: ["./audio/escuelas.mp3"] },
+            ].map((audio, index) => (
+              <motion.div
+                key={index}
+                className={`audio-card ${activeAudio === index ? "active" : ""}`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <h4>{audio.title}</h4>
+
+                {/* Iteramos cada archivo dentro de la tarjeta */}
+                {audio.files.map((file, fileIndex) => (
+                  <audio
+                    key={fileIndex}
+                    controls
+                    className="audio-player"
+                    onPlay={(e) => {
+                      // Detiene los demás audios
+                      document.querySelectorAll("audio").forEach((el) => {
+                        if (el !== e.target) {
+                          el.pause();
+                          el.currentTime = 0;
+                        }
+                      });
+                      setActiveAudio(index); // Marca la tarjeta activa
+                    }}
+                    onPause={() => {
+                      setActiveAudio(null);
+                    }}
+                  >
+                    <source src={file} type="audio/mpeg" />
+                    Tu navegador no soporta el elemento de audio.
+                  </audio>
+                ))}
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="btn">
+            <button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button>
+          </div>
+        </motion.div>
+      )}
       </AnimatePresence>
     </section>
   );
