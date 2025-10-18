@@ -172,7 +172,7 @@ export default function Cuerpo() {
 
           <div className="audio-menu">
             {[
-              { title: "🎙 Historia de los Saltos del Tabay", files: ["./audio/PlazaColonHistoria.mp3"] },
+              { title: "🎙 Historia", files: ["./audio/PlazaColonHistoria.mp3"] },
               { title: "🎶 Cultura y tradición", files: ["./audio/PlazaColonCultura.mp3"] },
               { title: "👵 Testimonios de vecinos", files: ["./audio/testimonios.mp3"] },
               { title: "🌳 Sonidos de los Saltos del Tabay", files: ["./audio/sonidos.mp3"] },
