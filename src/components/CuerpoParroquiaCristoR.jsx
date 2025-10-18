@@ -3,13 +3,14 @@ import { motion, AnimatePresence} from "framer-motion";
 import "../css/styles.css";
 
 export default function Cuerpo() {
+  const [activeAudio, setActiveAudio] = useState(null);
   const [activeSection, setActiveSection] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
-    "./images/ParroquiaCristoRedentor/cr01.jpg",
-    "./images/ParroquiaCristoRedentor/cr02.jpg",
-    "./images/ParroquiaCristoRedentor/cr03.jpg",
+    "./images/ParroquiaCristoRedentor/cr01.JPG",
+    "./images/ParroquiaCristoRedentor/cr02.JPG",
+    "./images/ParroquiaCristoRedentor/cr03.JPG",
     "./images/ParroquiaCristoRedentor/img0.jpg",
     "./images/ParroquiaCristoRedentor/img1.jpg",
     "./images/ParroquiaCristoRedentor/img2.jpg",
@@ -19,10 +20,10 @@ export default function Cuerpo() {
     "./images/ParroquiaCristoRedentor/img6.jpg",
     "./images/ParroquiaCristoRedentor/img7.jpg",
     "./images/ParroquiaCristoRedentor/img8.jpg",
-    "./images/ParroquiaCristoRedentor/img9.jpg",
-    "./images/ParroquiaCristoRedentor/img10.jpg",
-    "./images/ParroquiaCristoRedentor/img11.jpg",
-    "./images/ParroquiaCristoRedentor/img12.jpg",
+    "./images/ParroquiaCristoRedentor/img9.JPG",
+    "./images/ParroquiaCristoRedentor/img10.JPG",
+    "./images/ParroquiaCristoRedentor/img11.JPG",
+    "./images/ParroquiaCristoRedentor/img12.JPG",
     "./images/ParroquiaCristoRedentor/img13.jpg",
   ];
 
@@ -134,23 +135,73 @@ export default function Cuerpo() {
         </motion.div>
       )}
 
-      {/* Sección de Audio */}
+{/* Sección de Audio con Menú Moderno */}
       {activeSection === "audio" && (
-          <motion.div
-            key="audio"
-            className="audio-section"
-            variants={fadeVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ duration: 0.8 }}
-          >
-          <h3>Escucha la historia de la Parroquia Cristo Redentor</h3>
-          <audio controls autoPlay>
-            <source src="./audio/ParroquiaCristoR.mp3" type="audio/mpeg" />
-            Tu navegador no soporta el elemento de audio.
-          </audio>
-          <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
+        <motion.div
+          key="audio"
+          className="audio-section"
+          variants={fadeVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{ duration: 0.8 }}
+        >
+          <h3 style={{ color: "black", textAlign: "center", marginBottom: "20px" }}>🎧 Audios de la Parroquia Cristo Redentor</h3>
+
+          <div className="audio-menu">
+            {[
+              { title: "🎙 Historia", files: ["./audio/PlazaColonHistoria.mp3"] },
+              { title: "🎶 Cultura y tradición", files: ["./audio/PlazaColonCultura.mp3"] },
+              { title: "👵 Testimonios de vecinos", files: ["./audio/testimonios.mp3"] },
+              { title: "🌳 Sonidos Parroquia Cristo Redentor", files: ["./audio/sonidos.mp3"] },
+              { 
+                title: "🌟 Curiosidades", 
+                files: [
+                  "./audio/PlazaColonCuriosidadesCancha.mp3", 
+                  "./audio/PlazaColonCuriosidadesCarreraCaballo.mp3"   // 🔹 Nuevo audio agregado
+                ] 
+              },
+              { title: "🎓 Para las escuelas", files: ["./audio/escuelas.mp3"] },
+            ].map((audio, index) => (
+              <motion.div
+                key={index}
+                className={`audio-card ${activeAudio === index ? "active" : ""}`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <h4>{audio.title}</h4>
+
+                {/* Iteramos cada archivo dentro de la tarjeta */}
+                {audio.files.map((file, fileIndex) => (
+                  <audio
+                    key={fileIndex}
+                    controls
+                    className="audio-player"
+                    onPlay={(e) => {
+                      // Detiene los demás audios
+                      document.querySelectorAll("audio").forEach((el) => {
+                        if (el !== e.target) {
+                          el.pause();
+                          el.currentTime = 0;
+                        }
+                      });
+                      setActiveAudio(index); // Marca la tarjeta activa
+                    }}
+                    onPause={() => {
+                      setActiveAudio(null);
+                    }}
+                  >
+                    <source src={file} type="audio/mpeg" />
+                    Tu navegador no soporta el elemento de audio.
+                  </audio>
+                ))}
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="btn">
+            <button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button>
+          </div>
         </motion.div>
       )}
       </AnimatePresence>
