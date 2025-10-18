@@ -3,6 +3,7 @@ import { motion, AnimatePresence  } from "framer-motion";
 import "../css/styles.css";
 
 export default function Cuerpo() {
+  const [activeAudio, setActiveAudio] = useState(null);
   const [activeSection, setActiveSection] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -14,25 +15,25 @@ export default function Cuerpo() {
         "./images/SaltosTabay/Salto4.jpg",
         "./images/SaltosTabay/Salto5.jpg",
         "./images/SaltosTabay/Salto6.jpg",
-        "./images/SaltosTabay/Salto7.jpg",
+        "./images/SaltosTabay/salto7.jpg",
         "./images/SaltosTabay/Salto8.jpg",
         "./images/SaltosTabay/Salto9.jpg",
         "./images/SaltosTabay/Salto10.jpg",
         "./images/SaltosTabay/Salto11.jpg",
         "./images/SaltosTabay/Salto12.jpg",
-        "./images/SaltosTabay/Salto13.jpg",
-        "./images/SaltosTabay/Salto14.jpg",
+        "./images/SaltosTabay/salto13.jpg",
+        "./images/SaltosTabay/salto14.jpg",
         "./images/SaltosTabay/Salto15.jpg",
         "./images/SaltosTabay/Salto16.jpg",
         "./images/SaltosTabay/Salto17.jpg",
-        "./images/SaltosTabay/Salto18.jpg",
-        "./images/SaltosTabay/Salto19.jpg",
-        "./images/SaltosTabay/Salto20.jpg",
-        "./images/SaltosTabay/Salto21.jpg",
-        "./images/SaltosTabay/Salto22.jpg",
-        "./images/SaltosTabay/Salto23.jpg",
-        "./images/SaltosTabay/Salto24.jpg",
-        "./images/SaltosTabay/Salto25.jpg",
+        "./images/SaltosTabay/Salto18.JPG",
+        "./images/SaltosTabay/Salto19.JPG",
+        "./images/SaltosTabay/Salto20.JPG",
+        "./images/SaltosTabay/Salto21.JPG",
+        "./images/SaltosTabay/Salto22.JPG",
+        "./images/SaltosTabay/Salto23.JPG",
+        "./images/SaltosTabay/Salto24.JPG",
+        "./images/SaltosTabay/Salto25.JPG",
   ];
 
   useEffect(() => {
@@ -156,23 +157,73 @@ export default function Cuerpo() {
         </motion.div>
       )}
 
-      {/* Sección de Audio */}
+ {/* Sección de Audio con Menú Moderno */}
       {activeSection === "audio" && (
         <motion.div
-            key="audio"
-            className="audio-section"
-            variants={fadeVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ duration: 0.8 }}
-          >
-            <h3>Escucha la Historia/Cultura de los Saltos del Tabay</h3>
-            <audio controls>
-            <source src="./audio/SaltoTabay.mp3" type="audio/mpeg" />
-            Tu navegador no soporta el elemento de audio.
-            </audio>
-            <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
+          key="audio"
+          className="audio-section"
+          variants={fadeVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{ duration: 0.8 }}
+        >
+          <h3 style={{ color: "black", textAlign: "center", marginBottom: "20px" }}>🎧 Audios de los Saltos del Tabay</h3>
+
+          <div className="audio-menu">
+            {[
+              { title: "🎙 Historia de los Saltos del Tabay", files: ["./audio/PlazaColonHistoria.mp3"] },
+              { title: "🎶 Cultura y tradición", files: ["./audio/PlazaColonCultura.mp3"] },
+              { title: "👵 Testimonios de vecinos", files: ["./audio/testimonios.mp3"] },
+              { title: "🌳 Sonidos de los Saltos del Tabay", files: ["./audio/sonidos.mp3"] },
+              { 
+                title: "🌟 Curiosidades", 
+                files: [
+                  "./audio/PlazaColonCuriosidadesCancha.mp3", 
+                  "./audio/PlazaColonCuriosidadesCarreraCaballo.mp3"   // 🔹 Nuevo audio agregado
+                ] 
+              },
+              { title: "🎓 Para las escuelas", files: ["./audio/escuelas.mp3"] },
+            ].map((audio, index) => (
+              <motion.div
+                key={index}
+                className={`audio-card ${activeAudio === index ? "active" : ""}`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <h4>{audio.title}</h4>
+
+                {/* Iteramos cada archivo dentro de la tarjeta */}
+                {audio.files.map((file, fileIndex) => (
+                  <audio
+                    key={fileIndex}
+                    controls
+                    className="audio-player"
+                    onPlay={(e) => {
+                      // Detiene los demás audios
+                      document.querySelectorAll("audio").forEach((el) => {
+                        if (el !== e.target) {
+                          el.pause();
+                          el.currentTime = 0;
+                        }
+                      });
+                      setActiveAudio(index); // Marca la tarjeta activa
+                    }}
+                    onPause={() => {
+                      setActiveAudio(null);
+                    }}
+                  >
+                    <source src={file} type="audio/mpeg" />
+                    Tu navegador no soporta el elemento de audio.
+                  </audio>
+                ))}
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="btn">
+            <button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button>
+          </div>
         </motion.div>
       )}
       </AnimatePresence>

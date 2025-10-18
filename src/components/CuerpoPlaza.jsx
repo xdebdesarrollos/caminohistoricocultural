@@ -158,18 +158,18 @@ export default function Cuerpo() {
 
           <div className="audio-menu">
             {[
-              { title: "🎙 Historia de la Plaza", files: ["./audio/PlazaColonHistoria.mp3"] },
-              { title: "🎶 Cultura y tradición", files: ["./audio/PlazaColonCultura.mp3"] },
-              { title: "👵 Testimonios de vecinos", files: ["./audio/testimonios.mp3"] },
-              { title: "🌳 Sonidos de la Plaza", files: ["./audio/sonidos.mp3"] },
+              { title: "🎙 Historia de la Plaza", files: ["./audio/PlazaColon/PlazaColonHistoria.mp3"] },
+              { title: "🎶 Cultura y tradición", files: ["./audio/PlazaColon/PlazaColonCultura.mp3"] },
+              { title: "👵 Testimonios de vecinos", files: ["./audio/PlazaColon/testimonios.mp3"] },
+              { title: "🌳 Sonidos de la Plaza", files: ["./audio/PlazaColon/sonidos.mp3"] },
               { 
                 title: "🌟 Curiosidades", 
                 files: [
-                  "./audio/PlazaColonCuriosidadesCancha.mp3", 
-                  "./audio/PlazaColonCuriosidadesCarreraCaballo.mp3"   // 🔹 Nuevo audio agregado
+                  "./audio/PlazaColon/PlazaColonCuriosidadesCancha.mp3", 
+                  "./audio/PlazaColon/PlazaColonCuriosidadesCarreraCaballo.mp3"   // 🔹 Nuevo audio agregado
                 ] 
               },
-              { title: "🎓 Para las escuelas", files: ["./audio/escuelas.mp3"] },
+              { title: "🎓 Para las escuelas", files: ["./audio/PlazaColon/escuelas.mp3"] },
             ].map((audio, index) => (
               <motion.div
                 key={index}
