@@ -49,7 +49,7 @@ const Cards = () => {
             <div className="card-face card-front">
               <div className="icon-container">
                 <img
-                  src={`/images/icons/${card.icon}`}
+                  src={`./images/icons/${card.icon}`}
                   alt={`${card.title} icon`}
                   className="card-icon"
                 />
