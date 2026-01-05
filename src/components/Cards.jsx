@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import '../css/cards.css';
+import '../css/cards.css'; // Nuevo archivo CSS
 
 const Cards = () => {
   const [flipped, setFlipped] = useState([false, false, false, false]);
@@ -35,33 +35,35 @@ const Cards = () => {
   };
 
   return (
-    <div className="cards-container">
+    <div className="cards-grid">
       {cardsData.map((card, index) => (
         <motion.div
           key={index}
-          className="card"
+          className="card-wrapper"
           onClick={() => handleFlip(index)}
-          animate={{ rotateY: flipped[index] ? 360: 0 }}
-          transition={{ duration: 0.6 }}
+          whileHover={{ y: -8 }}
+          transition={{ duration: 0.3 }}
         >
-          <div className="card-inner">
-            <motion.div
-              className="card-front"
-              initial={{ rotateY: -180}}
-              animate={{ rotateY: flipped[index] ? 0 : 360 }}
-              transition={{ duration: 0.6 }}
-            >
-              <img src={`images/icons/${card.icon}`} alt={`${card.title} icon`} className="card-icon" />
-              <h3>{card.title}</h3>
-            </motion.div>
-            <motion.div
-              className="card-back"
-              initial={{ rotateY: 180 }}
-              animate={{ rotateY: flipped[index] ? 0 : 180 }}
-              transition={{ duration: 0.6 }}
-            >
-              <p>{card.backText}</p>
-            </motion.div>
+          <div className={`card-flip ${flipped[index] ? 'flipped' : ''}`}>
+            {/* Frente de la card */}
+            <div className="card-face card-front">
+              <div className="icon-container">
+                <img
+                  src={`/images/icons/${card.icon}`}
+                  alt={`${card.title} icon`}
+                  className="card-icon"
+                />
+              </div>
+              <h3 className="card-title">{card.title}</h3>
+              <p className="flip-hint">Toca para ver más →</p>
+            </div>
+
+            {/* Reverso de la card */}
+            <div className="card-face card-back">
+              <h3 className="card-title-back">{card.title}</h3>
+              <p className="card-text">{card.backText}</p>
+              <p className="flip-hint-back">← Toca para volver</p>
+            </div>
           </div>
         </motion.div>
       ))}
