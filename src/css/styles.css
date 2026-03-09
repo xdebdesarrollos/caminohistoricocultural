@@ -452,26 +452,28 @@ main {
     .h3{
       text-align: center;
     }
-    .icon-container {
+
+    .icon-containers {
       display: flex;
       justify-content: center;
       gap: 20px;
       margin-bottom: 20px;
+      align-items: center; 
     }
     
-    .icon-container button {
+    .icon-containers button {
       background: none;
       border: none;
       cursor: pointer;
     }
     
-    .icon-container img {
+    .icon-containers img {
       width: 120px;
       height: 120px;
       transition: transform 0.2s ease;
     }
 
-    .icon-container button img {
+    .icon-containers button img {
       transition: transform 0.3s ease-in-out;
       animation: heartbeat 1.5s infinite;
     }
@@ -492,7 +494,7 @@ main {
       }
     }
     
-    .icon-container img:hover {
+    .icon-containers img:hover {
       transform: scale(1.2);
     }
     
