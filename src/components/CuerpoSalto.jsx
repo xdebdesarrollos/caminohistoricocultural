@@ -68,7 +68,7 @@ export default function Cuerpo() {
         </p>
       </div>
       {/* Íconos de selección */}
-      <div className="icon-container">
+      <div className="icon-containers">
         <button onClick={() => setActiveSection("carousel")}>
           <img src="./images/icons/carpetadeimagenes.png" alt="Carrusel" /><div className="icon-titulo">Imágenes</div>
         </button>
