@@ -19,6 +19,14 @@ export default function Pie(){
                 height="auto"
                 />
             </div>
+                        <div>
+                <img 
+                src="./images/logo2026.png" 
+                alt="parque" 
+                width="100" 
+                height="auto"
+                />
+            </div>
             </div>
         <p>&copy; 2025 Camino Histórico/Cultural Jardín América Mnes. Argentina</p>
         <p>Contacto: <a style={{ color: "blue" }} href="mailto:caminohistoricoculturalja@gmail.com">caminohistoricoculturalja@gmail.com</a></p>
