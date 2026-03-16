@@ -10,15 +10,15 @@ export default function Cuerpo() {
 
   const images = [
         "./images/PlazaColon/IntendJorgeMachon.jpg",
+        "./images/PlazaColon/ConstrucciónPlazacolon.jpg",
         "./images/PlazaColon/PrimeraEtapa.jpg",
         "./images/PlazaColon/SegundaEtapa.jpg",
         "./images/PlazaColon/1966.jpg",
         "./images/PlazaColon/barquito.jpg",
         "./images/PlazaColon/VistaAerea.jpg",
-        "./images/PlazaColon/Plaza1.jpg",
-        "./images/PlazaColon/Plaza2.jpg",
         "./images/PlazaColon/Plaza3.jpg",
         "./images/PlazaColon/Plaza4.jpg",
+        "./images/PlazaColon/plazavista.jpg",
         "./images/PlazaColon/Aerea01.jpg",
         "./images/PlazaColon/Aerea02.jpg",
         "./images/PlazaColon/Aerea03.jpg",
