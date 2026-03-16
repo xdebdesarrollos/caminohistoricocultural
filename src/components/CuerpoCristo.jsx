@@ -8,8 +8,9 @@ export default function Cuerpo() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
-    "./images/CristoDeLaAmistad/img01.jpg",
-    "./images/CristoDeLaAmistad/img0.jpg",
+    "./images/CristoDeLaAmistad/img000.jpg",
+    "./images/CristoDeLaAmistad/img001.jpg",
+    "./images/CristoDeLaAmistad/img002.jpg",    
     "./images/CristoDeLaAmistad/img1.jpg",
     "./images/CristoDeLaAmistad/img2.jpg",
     "./images/CristoDeLaAmistad/img3.jpg",

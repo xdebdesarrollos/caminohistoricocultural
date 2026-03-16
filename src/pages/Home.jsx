@@ -30,7 +30,7 @@ export default function Home() {
           "El sitio web asociado a cada panel informativo proporciona datos históricos, culturales y curiosidades sobre el punto en cuestión. Además, para incentivar la exploración, el sistema sugiere otros destino dentro del recorrido, facilitando la navegación mediante Google Maps o GPS."
         },
         {
-          title: "¿Por qué se desarrolla este proyecto?",
+          title: "¿Por qué este proyecto?",
           text: "Para preservar la identidad cultural, fomentar el turismo y proporcionar una experiencia enriquecedora a residentes y visitantes de Jardín América. Localidad ubicada en la Provincia de Misiones."
           
         }
@@ -60,7 +60,9 @@ export default function Home() {
         transition={{ duration: 2, delay: 0.0 }}
         viewport={{ once: false }}
       >
-        <h2>Conocé Jardín América.</h2>
+        <div className="subtit">Conocé Jardín América</div>
+        <h2>Cuatro pilares de <em className="em">identidad</em> </h2>
+        <div className="subtit2">Hacé clic en cada tarjeta para descubrir más.</div>
         <Cards />
       </motion.section>
 
@@ -74,7 +76,7 @@ export default function Home() {
         transition={{ duration: 2, delay: 0.6 }}
         viewport={{ once: false }}
       >
-        <h2>Descubrí la historia viva en cada rincón.</h2>
+        <h2>Descubrí la historia en<em className="em"> cada rincón.</em> </h2>
         <div className="image-container">
           {["Saltos1.jpg", "municipalidad.jpg", "Jardin-america.jpg", "fuenteagua.jpg", "plazaiglesia.jpg", "cartelnew.jpg"].map((img, index) => (
            <motion.img
@@ -103,8 +105,12 @@ export default function Home() {
         transition={{ duration: 2, delay: 0.8 }}
         viewport={{ once: false }}
       >
-        <h2>Ubicaciones de Paneles informativos en mapa.</h2>
-        <div>Las marcas color amarillo son los diferentes paneles de información ubicados en la ciudad.</div>
+        <div className="subtit">Mapa interactivo.</div>
+            <h2>Ubicación de Paneles <em className="em"> informativos.</em></h2>
+            <div className="mapnote">
+            <span className="map-dot"></span>
+            Los marcadores amarillos indican cada panel ubicado en la ciudad.
+        </div>
         <div className="map-container">
           <iframe
             src="https://www.google.com/maps/d/embed?mid=1GswgKngHeyHmrw20zUT9AzN5yIGupVs&ehbc=2E312F"
@@ -128,7 +134,7 @@ export default function Home() {
         transition={{ duration: 2, delay: 0.8 }}
         viewport={{ once: false }}
       >
-        <h2 className="section-title">¿Cómo funciona?</h2>
+        <h2>¿Cómo <em className="em">funciona?</em></h2>
         
         <div className="function-container">
           {/* Columna izquierda: texto */}

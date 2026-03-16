@@ -8,8 +8,11 @@ export default function Cuerpo() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
-        "./images/SaltosTabay/Salto00.jpg",
-        "./images/SaltosTabay/Salto1.jpg",
+        "./images/SaltosTabay/Salto001.jpg",
+        "./images/SaltosTabay/Salto002.jpg",
+        "./images/SaltosTabay/Salto003.jpg",
+        "./images/SaltosTabay/Salto004.jpg",
+        "./images/SaltosTabay/Salto005.jpg",
         "./images/SaltosTabay/Salto2.jpg",
         "./images/SaltosTabay/Salto3.jpg",
         "./images/SaltosTabay/Salto4.jpg",

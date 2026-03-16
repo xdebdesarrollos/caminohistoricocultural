@@ -1,23 +1,73 @@
 
 /* General styles */
 body {
-    background: linear-gradient(#85d161, #ffffff, #4fabd3);
+    background: linear-gradient(#d4cdbd, #ffffff, #4fabd3);
     text-align: left;
     width: 100%;
 }
 
 h2 {
-    color: white;
-  font-size: 3rem;
-  text-shadow:
-    -1px -1px 3px #999,
-    0 0 1px darkred,
-    1px 1px 1px red,
-    2px 2px 1px #555,
-    3px 3px 1px #222,
-    4px 4px 1px #000;
+    text-align: left;
+    --blanco: #ffffff;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: -1.5rem;
+    padding: 1.5rem;
 
 }
+
+.subtit {
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  opacity: 0.8;
+  font-weight: 500;
+  color: #457b9d;
+  text-align: left;
+  top: 100%;
+  padding: 1rem 2rem;
+  margin-bottom: -1.5rem;
+}
+.subtit2{
+    color: black;
+    font-size: 1rem;
+    text-align: left;
+    padding: 1rem 2rem;
+    margin-top: -2rem;
+}
+.mapnote{
+    --blanco: #ffffff;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--blanco);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    color: var(--gris);
+    margin-bottom: 2rem;
+}
+.map-dot{
+    width: 10px;
+    height: 10px;
+    background: #f4c542;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-size: 0.82rem;
+    color: var(--gris);
+}
+.em{
+    color: rgb(27, 187, 109);
+    font-style: italic;
+}
+
+
 
 .hero {
     position: center;
@@ -209,6 +259,7 @@ footer a {
     gap: 20px;
     flex-wrap: wrap;
     text-align: center;
+    margin-top: 2.5rem;
 }
 .image-container img {
     width: 100%;
