@@ -1,0 +1,58 @@
+/* Contenedor del botón */
+
+.btn-map{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:40px 0;
+}
+
+
+/* Botón moderno */
+
+.map-button{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  padding:14px 28px;
+
+  font-size:16px;
+  font-weight:600;
+  letter-spacing:0.5px;
+
+  text-decoration:none;
+
+  color:white;
+
+  background:linear-gradient(135deg,#00a8ff,#0066ff);
+
+  border-radius:40px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+  transition:all 0.3s ease;
+}
+
+
+/* efecto hover */
+
+.map-button:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:0 15px 35px rgba(0,0,0,0.3);
+
+  background:linear-gradient(135deg,#0066ff,#0044cc);
+
+}
+
+
+/* efecto click */
+
+.map-button:active{
+
+  transform:scale(0.97);
+
+}
