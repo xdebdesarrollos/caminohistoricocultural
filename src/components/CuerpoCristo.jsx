@@ -46,8 +46,8 @@ export default function Cuerpo() {
     <section className="contenedor-principal">
       {/* Sección de Información (Fija) */}
       <div className="info">
-        <h2>Bienvenidos al Cristo de la Amistad</h2>
-        <p style={{ color: "black" }}>
+        <h1>Bienvenidos al Cristo de la Amistad</h1>
+        <p className="text-info">
           El Cristo de la Amistad, una obra maestra del escultor chileno Luis Javín Sizzara, 
           se yergue en el ingreso sur la Ciudad. La obra inicial, fue tallada en madera. Esta majestuosa escultura representa una figura de Cristo crucificado, símbolo de fe y esperanza para la comunidad.
         </p>

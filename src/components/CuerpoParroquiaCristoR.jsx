@@ -53,8 +53,8 @@ export default function Cuerpo() {
     <section className="contenedor-principal">
             {/* Sección de Información (Fija) */}
       <div className="info">
-        <h2>Bienvenidos a la Parroquia Cristo Redentor</h2>
-        <p style={{ color: "black" }}>
+        <h1>Bienvenidos a la Parroquia Cristo Redentor</h1>
+        <p className="text-info">
             La Parroquia Cristo Redentor, ubicada en el corazón de Jardín América, Misiones, la Parroquia Cristo Redentor es un símbolo de fe y unión para la comunidad. Su historia se remonta a los primeros años de la ciudad, cuando los fieles sintieron la necesidad de un espacio donde congregarse para la oración y la celebración de la Eucaristía.
         </p>
       </div>

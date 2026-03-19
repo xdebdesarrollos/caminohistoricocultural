@@ -60,8 +60,8 @@ export default function Cuerpo() {
     <section className="contenedor-principal">
       {/* Sección de Información (Fija) */}
       <div className="info">
-        <h2>Bienvenidos a la Plaza Colón</h2>
-        <p style={{ color: "black" }}>
+        <h1>Bienvenidos a la Plaza Colón</h1>
+        <p className="text-info">
             La Plaza Colón ubicada en el centro de la ciudad, es un espacio lleno de historia, naturaleza y cultura. Descubre los eventos, monumentos y la riqueza natural que hacen de este lugar un símbolo de Jardín América.
         </p>
       </div>

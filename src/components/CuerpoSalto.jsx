@@ -65,8 +65,8 @@ export default function Cuerpo() {
     <section className="contenedor-principal">
       {/* Sección de Información (Fija) */}
       <div className="info">
-        <h2>Bienvenidos a los Saltos del Tabay</h2>
-        <p style={{ color: "black" }}>
+        <h1>Bienvenidos a los Saltos del Tabay</h1>
+        <p className="text-info">
             Los Saltos del Tabay, ubicado a pocos kilómetros del casco urbano, es un lugar emblemático donde la naturaleza y la cultura se encuentran. Descubrí su imponente cascada, los senderos rodeados de selva y el valor histórico que lo convierte en un orgullo de Jardín América.
         </p>
       </div>
