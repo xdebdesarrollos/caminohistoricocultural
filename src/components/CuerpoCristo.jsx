@@ -81,7 +81,7 @@ export default function Cuerpo() {
             exit="exit"
             transition={{ duration: 0.8 }}
           >
-            <h3 style={{ color: "black", textAlign: "center" }}>Galería de imágenes</h3>
+            <h2 style={{ color: "black", textAlign: "center" }}>Galería de imágenes</h2>
             <div className="carousel-container">
               <button className="carousel-btn prev" onClick={handlePrevImage}>❮</button>
               <img src={images[currentImage]} alt={`Imagen ${currentImage + 1}`} className="carousel-image" />
@@ -101,7 +101,7 @@ export default function Cuerpo() {
             exit="exit"
             transition={{ duration: 0.8 }}
           >
-            <h3 style={{ color: "black", textAlign: "center" }}>Disfruta de estos videos sobre el Cristo de la Amistad</h3>
+            <h2 style={{ color: "black", textAlign: "center" }}>Disfruta de estos videos sobre el Cristo de la Amistad</h2>
             <div className="video-container">
               <div className="video">
                 <iframe 
@@ -141,7 +141,7 @@ export default function Cuerpo() {
           exit="exit"
           transition={{ duration: 0.8 }}
         >
-          <h3 style={{ color: "black", textAlign: "center", marginBottom: "20px" }}>🎧 Audios del Cristo de la Amistad</h3>
+          <h2 style={{ color: "black", textAlign: "center", marginBottom: "20px" }}>🎧 Audios del Cristo de la Amistad</h2>
 
           <div className="audio-menu">
             {[
