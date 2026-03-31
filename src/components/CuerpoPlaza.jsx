@@ -4,10 +4,9 @@ import "../css/styles.css";
 
 
 export default function Cuerpo() {
-  const [activeAudio, setActiveAudio] = useState(null);
+  const [audioCategory, setAudioCategory] = useState(null);
   const [activeSection, setActiveSection] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
-
   const images = [
         "./images/PlazaColon/IntendJorgeMachon.jpg",
         "./images/PlazaColon/ConstrucciónPlazacolon.jpg",
@@ -118,7 +117,7 @@ export default function Cuerpo() {
                 <iframe 
                   width="560" 
                   height="315" 
-                  src="https://www.youtube.com/embed/-yurqeZ41ds" 
+                  src="https://www.youtube.com/embed/eAG4K8vlu6Q"
                   title="YouTube video player" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -130,7 +129,31 @@ export default function Cuerpo() {
               <iframe 
                 width="560" 
                 height="315" 
-                src="https://www.youtube.com/embed/UVoQE0VIT1k" 
+                src="https://www.youtube.com/embed/PaK0NF2yeco"
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+            {/* Video 3 */}
+            <div className="video">
+              <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/-yurqeZ41ds"  
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+            {/* Video 4 */}
+            <div className="video">
+              <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/UVoQE0VIT1k"  
                 title="YouTube video player" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -145,73 +168,168 @@ export default function Cuerpo() {
 
       {/* Sección de Audio con Menú Moderno */}
       {activeSection === "audio" && (
-        <motion.div
-          key="audio"
-          className="audio-section"
-          variants={fadeVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          transition={{ duration: 0.8 }}
-        >
-          <h2 style={{ color: "black", textAlign: "center", marginBottom: "20px" }}>🎧 Audios de la Plaza Colón</h2>
+      <motion.div
+        key="audio"
+        className="audio-section"
+        variants={fadeVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        transition={{ duration: 0.8 }}
+      >
 
-          <div className="audio-menu">
-            {[
-              { title: "🎙 Historia de la Plaza", files: ["./audio/PlazaColon/PlazaColonHistoria.mp3"] },
-              { title: "🎶 Cultura y tradición", files: ["./audio/PlazaColon/PlazaColonCultura.mp3"] },
-              { title: "👵 Testimonios de vecinos", files: ["./audio/PlazaColon/testimonios.mp3"] },
-              { title: "🌳 Sonidos de la Plaza", files: ["./audio/PlazaColon/sonidos.mp3"] },
-              { 
-                title: "🌟 Curiosidades", 
-                files: [
-                  "./audio/PlazaColon/PlazaColonCuriosidadesCancha.mp3", 
-                  "./audio/PlazaColon/PlazaColonCuriosidadesCarreraCaballo.mp3"   // 🔹 Nuevo audio agregado
-                ] 
-              },
-              { title: "🎓 Para las escuelas", files: ["./audio/PlazaColon/escuelas.mp3"] },
-            ].map((audio, index) => (
-              <motion.div
-                key={index}
-                className={`audio-card ${activeAudio === index ? "active" : ""}`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <h4>{audio.title}</h4>
+       <h2 style={{ color: "black", textAlign: "center" }}>🎧 Audios de la Plaza Colón</h2>
+        {!audioCategory && (
+          <div className="audio-categories">
+            <button onClick={() => setAudioCategory("historia")} className="audio-category">
+              Historia de la Plaza
+            </button>
 
-                {/* Iteramos cada archivo dentro de la tarjeta */}
-                {audio.files.map((file, fileIndex) => (
-                  <audio
-                    key={fileIndex}
-                    controls
-                    className="audio-player"
-                    onPlay={(e) => {
-                      // Detiene los demás audios
-                      document.querySelectorAll("audio").forEach((el) => {
-                        if (el !== e.target) {
-                          el.pause();
-                          el.currentTime = 0;
-                        }
-                      });
-                      setActiveAudio(index); // Marca la tarjeta activa
-                    }}
-                    onPause={() => {
-                      setActiveAudio(null);
+            <button onClick={() => setAudioCategory("cultura")} className="audio-category">
+              Cultura y Tradición
+            </button>
+
+            <button onClick={() => setAudioCategory("monumentos")} className="audio-category">
+              Monumentos
+            </button>
+
+            <button onClick={() => setAudioCategory("curiosidades")} className="audio-category">
+              Curiosidades
+            </button>
+
+          </div>
+        )}
+        {audioCategory && (
+        <div className="audio-player-area">
+            <button className="back-btn" onClick={() => setAudioCategory(null)}>⬅ Volver
+            </button>
+            {audioCategory === "historia" && (
+              <div className="audio-big">
+                <h2 style={{ textAlign: "center" }}>Escuchar Historia de la Plaza</h2>
+                <div className="museum-audio-player">
+                  <button
+                  className="play-btn"
+                  onClick={() => {
+                    const audio = document.getElementById("audio-player");
+                    if (audio.paused) {
+                      audio.play();
+                    } else {
+                      audio.pause();
+                    }
+                  }}
+                  >
+                   ▶
+                  </button>
+                  <audio id="audio-player">
+                    <source src="./audio/PlazaColon/PlazaColonHistoria.mp3" type="audio/mpeg"/>
+                  </audio>
+                </div>
+              </div>
+            )}
+            {audioCategory === "cultura" && (
+              <div className="audio-big">
+                <h2 style={{ textAlign: "center" }}>Escuchar Cultura y Tradición</h2>
+                <div className="museum-audio-player">
+
+                  <button
+                    className="play-btn"
+                    onClick={() => {
+                      const audio = document.getElementById("audio-player");
+                      if (audio.paused) {
+                        audio.play();
+                      } else {
+                        audio.pause();
+                      }
                     }}
                   >
-                    <source src={file} type="audio/mpeg" />
-                    Tu navegador no soporta el elemento de audio.
+                    ▶
+                  </button>
+                  <audio id="audio-player">
+                      <source src="./audio/PlazaColon/PlazaColonCultura.mp3" type="audio/mpeg"/>
                   </audio>
-                ))}
-              </motion.div>
-            ))}
-          </div>
+                </div>                
+              </div>
+            )}
+            {audioCategory === "monumentos" && (
+              <div className="audio-big">
+                <h2 style={{ textAlign: "center" }}>Escuchar sobre sus Monumentos</h2>
+                <div className="museum-audio-player">
+                  <button
+                    className="play-btn"
+                    onClick={() => {
+                      const audio = document.getElementById("audio-player");
+                      if (audio.paused) {
+                        audio.play();
+                      } else {
+                        audio.pause();
+                      }
+                    }}
+                  >
+                    ▶
+                  </button>
+                  <audio id="audio-player">
+                    <source src="./audio/PlazaColon/monumentos.mp3" type="audio/mpeg"/>
+                  </audio>
 
-          <div className="btn">
-            <button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button>
+                </div>                
+              </div>
+            )}
+            {audioCategory === "curiosidades" && (
+              <div className="audio-big">
+                <h2 style={{ textAlign: "center" }}>Escuchar algunas Curiosidades</h2>
+                {/* AUDIO 1 */}
+                <div className="museum-audio-player">
+                  <button
+                    className="play-btn"
+                    onClick={() => {
+                      const audio = document.getElementById("audio1");
+                      if (audio.paused) {
+                        audio.play();
+                      } else {
+                        audio.pause();
+                      }
+                    }}
+                  >
+                    ▶
+                  </button>
+                  <audio id="audio1">
+                    <source src="./audio/PlazaColon/PlazaColonCuriosidadesCancha.mp3" type="audio/mpeg"/>
+                  </audio>
+                  <h3 className="audio-label">La cancha de fútbol en la plaza</h3>
+                </div>
+
+                {/* AUDIO 2 */}
+                <div className="museum-audio-player">
+                  <button
+                    className="play-btn"
+                    onClick={() => {
+                      const audio = document.getElementById("audio2");
+                      if (audio.paused) {
+                        audio.play();
+                      } else {
+                        audio.pause();
+                      }
+                    }}
+                  >
+                    ▶
+                  </button>
+                  <audio id="audio2">
+                    <source src="./audio/PlazaColon/PlazaColonCuriosidadesCarreraCaballo.mp3" type="audio/mpeg"/>
+                  </audio>
+                  <h3 className="audio-label">Las carreras de caballos</h3>
+                </div>
+              </div>
+            )}
           </div>
-        </motion.div>
-      )}
+        )}
+        <div className="btn">
+          <button className="close-btn" onClick={() => setActiveSection(null)}>
+            ❌ Ocultar
+          </button>
+        </div>
+
+      </motion.div>
+)}
 
       </AnimatePresence>
     </section>
