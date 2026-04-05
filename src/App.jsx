@@ -9,8 +9,7 @@ import CristoAmistad from "./pages/CristoDeLaAmistad";
 import ParroquiaCristoR from "./pages/ParroquiaCristoR";
 import SaltoTabay from "./pages/SaltoTabay";
 import NotFound from "./components/NotFound";
-
-
+import Creditos from './pages/Creditos1';
 
 function App() {
   return (
@@ -18,6 +17,7 @@ function App() {
     <HashRouter>
   <Routes>
     <Route path="/" element={<Home />} />
+    <Route path="/creditos" element={<Creditos />} />
     <Route path="/plazacolon" element={<PlazaColon />} />
     <Route path="/cristoamistad" element={<CristoAmistad />} />
     <Route path="/parroquiacristoredentor" element={<ParroquiaCristoR />} />

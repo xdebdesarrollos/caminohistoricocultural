@@ -17,7 +17,6 @@ export default function Cuerpo() {
         "./images/PlazaColon/VistaAerea.jpg",
         "./images/PlazaColon/Plaza3.jpg",
         "./images/PlazaColon/Plaza4.jpg",
-        "./images/PlazaColon/plaza1996.jpg",
         "./images/PlazaColon/Aerea01.jpg",
         "./images/PlazaColon/Aerea02.jpg",
         "./images/PlazaColon/Aerea03.jpg",
