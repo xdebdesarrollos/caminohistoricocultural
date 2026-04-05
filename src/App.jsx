@@ -9,7 +9,7 @@ import CristoAmistad from "./pages/CristoDeLaAmistad";
 import ParroquiaCristoR from "./pages/ParroquiaCristoR";
 import SaltoTabay from "./pages/SaltoTabay";
 import NotFound from "./components/NotFound";
-import Creditos from './pages/Creditos1';
+import Creditos from './pages/Creditos';
 
 function App() {
   return (
