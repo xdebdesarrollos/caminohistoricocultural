@@ -1,4 +1,4 @@
-import'../css/styles.css'
+import { Link } from "react-router-dom";
 export default function Pie(){
     return (
         <footer>
@@ -28,8 +28,14 @@ export default function Pie(){
                 />
             </div>
             </div>
-        <p>&copy; 2025 Camino Histórico/Cultural Jardín América Mnes. Argentina</p>
+        
+        
+        <Link to="/creditos" className="creditos-link">
+                <span className="creditos-link-line" />
+                Créditos y Agradecimientos
+        </Link>
         <p>Contacto: <a style={{ color: "blue" }} href="mailto:caminohistoricoculturalja@gmail.com">caminohistoricoculturalja@gmail.com</a></p>
+        <p>&copy; 2026 Camino Histórico/Cultural Jardín América Mnes. Argentina</p>
         </footer>
     )
 

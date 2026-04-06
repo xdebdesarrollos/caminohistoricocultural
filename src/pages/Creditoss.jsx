@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Pie from "../components/Pie.jsx";
 import "../css/creditos.css";
 import { Link } from "react-router-dom";
@@ -43,10 +42,6 @@ const creditosData = [
 ];
 
 export default function Creditos() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-  }, []);
-
   return (
     <>
       <div className="creditos-container">

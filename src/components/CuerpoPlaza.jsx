@@ -260,11 +260,12 @@ export default function Cuerpo() {
             {audioCategory === "monumentos" && (
               <div className="audio-big">
                 <h2 style={{ textAlign: "center" }}>Escuchar sobre sus Monumentos</h2>
+                {/* AUDIO 1 */}
                 <div className="museum-audio-player">
                   <button
                     className="play-btn"
                     onClick={() => {
-                      const audio = document.getElementById("audio-player");
+                      const audio = document.getElementById("audio1");
                       if (audio.paused) {
                         audio.play();
                       } else {
@@ -274,11 +275,32 @@ export default function Cuerpo() {
                   >
                     ▶
                   </button>
-                  <audio id="audio-player">
-                    <source src="./audio/PlazaColon/monumentos.mp3" type="audio/mpeg"/>
+                  <audio id="audio1">
+                    <source src="./audio/PlazaColon/PlazaColonPiramides.mp3" type="audio/mpeg"/>
                   </audio>
+                  <h3 className="audio-label">Pirámides</h3>
+                </div> 
 
-                </div>                
+                {/* AUDIO 2 */}
+                <div className="museum-audio-player">
+                  <button
+                    className="play-btn"
+                    onClick={() => {
+                      const audio = document.getElementById("audio2");
+                      if (audio.paused) {
+                        audio.play();
+                      } else {
+                        audio.pause();
+                      }
+                    }}
+                  >
+                    ▶
+                  </button>
+                  <audio id="audio2">
+                    <source src="./audio/PlazaColon/PlazaColonMonumentoMadres.mp3" type="audio/mpeg"/>
+                  </audio>
+                  <h3 className="audio-label">Monumento a las Madres, Biblia y Busto San Martín</h3>
+                </div>             
               </div>
             )}
             {audioCategory === "curiosidades" && (

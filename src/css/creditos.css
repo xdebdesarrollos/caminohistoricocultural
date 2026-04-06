@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap');
 
 :root {
-  --bg: #080c10;
+  --bg: #022446;
   --surface: #0e1420;
   --surface-hover: #141c2e;
   --accent: #c9a84c;
@@ -18,9 +18,8 @@
   min-height: 100vh;
   padding: 0 0 100px;
   background-color: var(--bg);
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
-    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  align-items: center;
+  
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   display: flex;
@@ -45,7 +44,7 @@
   content: 'CRÉDITOS';
   position: absolute;
   top: 60px;
-  left: 36px;
+  left: 56px;
   font-family: 'Playfair Display', serif;
   font-size: clamp(5rem, 14vw, 11rem);
   font-weight: 900;
@@ -143,9 +142,6 @@
 .creditos-card::after {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
   width: 3px;
   background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
   opacity: 0;
@@ -210,20 +206,132 @@
   }
 }
 
-/* ── MOBILE ─────────────────────────────────────────────── */
-@media (max-width: 600px) {
+/* ── TABLET (≤ 900px) ───────────────────────────────────── */
+@media (max-width: 900px) {
   .creditos-hero {
-    padding: 70px 24px 50px;
-  }
-
-  .creditos-grid {
-    padding: 0 24px;
-    grid-template-columns: 1fr;
+    padding: 80px 32px 60px;
   }
 
   .creditos-hero::before {
-    font-size: 5rem;
-    top: 50px;
-    left: 20px;
+    font-size: clamp(4rem, 12vw, 7rem);
+    top: 55px;
+    left: 28px;
   }
+
+  .creditos-grid {
+    padding: 0 32px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* ── MOBILE GRANDE (≤ 640px) ────────────────────────────── */
+@media (max-width: 640px) {
+  .creditos-container {
+    padding-bottom: 70px;
+  }
+
+  .creditos-hero {
+    padding: 65px 20px 48px;
+    gap: 10px;
+  }
+
+  .creditos-hero::before {
+    font-size: clamp(3rem, 18vw, 5rem);
+    top: 44px;
+    left: 16px;
+    letter-spacing: 0;
+  }
+
+  .creditos-hero-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+  }
+
+  .creditos-hero h1 {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+  }
+
+  .creditos-hero p {
+    font-size: 0.82rem;
+  }
+
+  .creditos-grid {
+    padding: 0 20px;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .creditos-card {
+    padding: 24px 20px 20px;
+  }
+
+  .creditos-card::before {
+    font-size: 2.8rem;
+    top: 12px;
+    right: 16px;
+  }
+
+  .creditos-card h3 {
+    font-size: 1rem;
+    padding-right: 28px;
+  }
+
+  .creditos-card span {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .creditos-card p {
+    font-size: 0.84rem;
+  }
+}
+
+/* ── MOBILE CHICO (≤ 380px) ─────────────────────────────── */
+@media (max-width: 380px) {
+  .creditos-hero {
+    padding: 56px 16px 40px;
+  }
+
+  .creditos-hero::before {
+    display: none; /* evita overflow en pantallas muy pequeñas */
+  }
+
+  .creditos-grid {
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .creditos-card {
+    padding: 20px 16px 18px;
+  }
+}
+
+/* ── LINK CRÉDITOS ───────────────────────────────────────── */
+.creditos-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #4a90d9;
+  cursor: pointer;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+ 
+.creditos-link:hover {
+  color: #2d6fb5;
+  gap: 12px;
+}
+ 
+.creditos-link .creditos-link-line {
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+ 
+.creditos-link:hover .creditos-link-line {
+  width: 40px;
 }
