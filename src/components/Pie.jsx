@@ -7,7 +7,7 @@ export default function Pie(){
                 <img 
                 src="./images/muni.png" 
                 alt="muni" 
-                width="200" 
+                width="250" 
                 height="auto"
                 />
             </div>
@@ -15,7 +15,7 @@ export default function Pie(){
                 <img 
                 src="./images/ptzc.png" 
                 alt="parque" 
-                width="100" 
+                width="150" 
                 height="auto"
                 />
             </div>
@@ -23,7 +23,7 @@ export default function Pie(){
                 <img 
                 src="./images/logo2026.png" 
                 alt="parque" 
-                width="100" 
+                width="150" 
                 height="auto"
                 />
             </div>
@@ -34,8 +34,8 @@ export default function Pie(){
                 <span className="creditos-link-line" />
                 Créditos y Agradecimientos
         </Link>
-        <p>Contacto: <a style={{ color: "blue" }} href="mailto:caminohistoricoculturalja@gmail.com">caminohistoricoculturalja@gmail.com</a></p>
-        <p>&copy; 2026 Camino Histórico/Cultural Jardín América Mnes. Argentina</p>
+        <h3>Contacto: <a style={{ color: "blue" }} href="mailto:caminohistoricoculturalja@gmail.com">caminohistoricoculturalja@gmail.com</a></h3>
+        <h3>&copy; 2026 Camino Histórico/Cultural Jardín América Mnes. Argentina</h3>
         </footer>
     )
 

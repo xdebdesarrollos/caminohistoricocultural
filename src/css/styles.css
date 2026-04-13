@@ -1,13 +1,13 @@
 
 /* General styles */
 body {
-    background: linear-gradient(#d4cdbd, #ffffff, #4fabd3);
+    background: linear-gradient(#7b693e, #898989, #4fabd3);
     text-align: left;
 }
 
 h2 {
     text-align: left;
-    --blanco: #ffffff;
+    color: #ffffff;
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'DM Sans', sans-serif;
     box-sizing: border-box;
@@ -23,10 +23,10 @@ h2 {
 }
 
 .subtit {
-  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  font-size:x-large;
   opacity: 0.8;
   font-weight: 500;
-  color: #457b9d;
+  color: #d2e0e8;
   text-align: left;
   top: 100%;
   padding: 1rem 2rem;
@@ -40,7 +40,7 @@ h2 {
     margin-top: -2rem;
 }
 .mapnote{
-    --blanco: #ffffff;
+    color: #000000;
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
@@ -48,7 +48,7 @@ h2 {
     background: var(--blanco);
     padding: 0.6rem 1.2rem;
     border-radius: 50px;
-    font-size: 0.82rem;
+    font-size: 1.5rem;
     color: var(--gris);
     margin-bottom: 2rem;
 }
@@ -59,14 +59,12 @@ h2 {
     border-radius: 50%;
     box-sizing: border-box;
     font-size: 0.82rem;
-    color: var(--gris);
+    color:#2386bf;
 }
 .em{
-    color: rgb(27, 187, 109);
+    color: rgb(178, 224, 147);
     font-style: italic;
 }
-
-
 
 .hero {
     position: center;

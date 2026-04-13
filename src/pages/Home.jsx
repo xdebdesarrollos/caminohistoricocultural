@@ -46,7 +46,7 @@ export default function Home() {
           viewport={{ once: false }}
         >
           <h2>{section.title}</h2>
-          <p style={{ color: "black" }}>{section.text}</p>
+          <h3 style={{ color: "black" }}>{section.text}</h3>
         </motion.div>
       ))}
 
