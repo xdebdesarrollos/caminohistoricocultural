@@ -53,9 +53,9 @@ h2 {
     margin-bottom: 2rem;
 }
 .map-dot{
-    width: 10px;
-    height: 10px;
-    background: #f4c542;
+    width: 20px;
+    height: 20px;
+    background: #f7f279;
     border-radius: 50%;
     box-sizing: border-box;
     font-size: 0.82rem;
