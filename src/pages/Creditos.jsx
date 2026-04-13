@@ -14,31 +14,31 @@ const creditosData = [
     nombre: "Municipalidad de Jardín América",
     rol: "Acompañamiento institucional",
     descripcion:
-      "Apoyo institucional para el desarrollo del circuito histórico cultural en la ciudad.",
+      "Apoyo institucional, Sr. Intendente Araujo Cesar Daniel, Dir. de Cultura Gonzalez Arnaldo, Consejo Deliberante.",
   },
   {
     nombre: "Parque Tecnológico",
     rol: "Innovación y desarrollo",
     descripcion:
-      "Espacio de articulación tecnológica para el desarrollo de herramientas digitales del proyecto.",
+      "Espacio de articulación tecnológica para el desarrollo de herramientas digitales del proyecto. Miembros tecnólogos.",
   },
   {
     nombre: "Investigadores locales",
     rol: "Investigación histórica",
     descripcion:
-      "Aporte de relatos, documentos y memoria histórica de la ciudad.",
+      "Aporte de relatos, documentos y memoria histórica de la ciudad. Sr. Cuenca José María",
   },
   {
-    nombre: "Producción audiovisual",
-    rol: "Contenido multimedia",
+    nombre: "Contenido y Producción Multimedial",
+    rol: "Diseño en Gral.",
     descripcion:
-      "Creación de videos, fotografías y material sonoro para cada estación cultural.",
+      "Producción de Textos, Creación de videos, fotografías y material sonoro para cada estación cultural. Videos Youtube canal Sr. Cuenca José María, Estudiante de Diseño Gráfico Benitez Fiorela Alejandra, Prof. Nivel inicial Maidana Araujo Jesica Alejandra.",
   },
   {
     nombre: "Comunidad de Jardín América",
     rol: "Participación ciudadana",
     descripcion:
-      "Vecinos que contribuyeron con historias, recuerdos y testimonios.",
+      "Vecinos que contribuyeron con historias, recuerdos y testimonios. Hijos y nietos de Pioneros, Flia. Benitez Antonio Eleodoro y Sra. Silveira Teresa Beatriz, Directora/Docente Moraiz Graciela.",
   },
 ];
 
