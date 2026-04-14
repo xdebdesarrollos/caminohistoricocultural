@@ -311,7 +311,27 @@ export default function Cuerpo() {
                   <audio id="audio2">
                     <source src="./audio/PlazaColon/PlazaColonMonumentoMadres.mp3" type="audio/mpeg"/>
                   </audio>
-                  <h3 className="audio-label">Monumento a las Madres, Biblia y Busto San Martín</h3>
+                  <h3 className="audio-label">Monumento a las Madres</h3>
+                </div>
+                {/* AUDIO 3 */}
+                <div className="museum-audio-player">
+                  <button
+                    className="play-btn"
+                    onClick={() => {
+                      const audio = document.getElementById("audio3");
+                      if (audio.paused) {
+                        audio.play();
+                      } else {
+                        audio.pause();
+                      }
+                    }}
+                  >
+                    ▶
+                  </button>
+                  <audio id="audio3">
+                    <source src="./audio/PlazaColon/PlazaColonMonolitoyBustoSanMartin.mp3" type="audio/mpeg"/>
+                  </audio>
+                  <h3 className="audio-label">Monolito y Busto de San Martín</h3>
                 </div>             
               </div>
             )}
