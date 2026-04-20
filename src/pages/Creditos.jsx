@@ -14,7 +14,7 @@ const creditosData = [
     nombre: "Municipalidad de Jardín América",
     rol: "Acompañamiento institucional",
     descripcion:
-      "Apoyo institucional, Sr. Intendente Araujo Cesar Daniel, Dir. de Cultura Gonzalez Arnaldo, Consejo Deliberante.",
+      "Apoyo institucional, Sr. Intendente Araujo Cesar Daniel, Dir. de Cultura Gonzalez Arnaldo, Miembros del Consejo Deliberante, Dir. de Dirección de Turismo, Dir. de Dirección de Prensa.",
   },
   {
     nombre: "Parque Tecnológico",
