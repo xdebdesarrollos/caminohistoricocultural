@@ -125,7 +125,7 @@ export default function Cuerpo() {
         )}
 
         {/* ================== VIDEOS ================== */}
-{/* Sección de Videos */}
+      {/* Sección de Videos */}
       {activeSection === "video" && (
         <motion.div
           key="video"
