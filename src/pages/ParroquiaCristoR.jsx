@@ -7,7 +7,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 
 export default function CaminoCultural() {
-   const mapUrl = "https://maps.google.com"; // aquí luego pones la dirección real
+   const mapUrl = "https://maps.app.goo.gl/TN6RGWvMtEVmsRyeA"; //dirección real
   return (
     <>    
           <Cabecera/>  
