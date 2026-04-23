@@ -174,19 +174,7 @@ export default function Cuerpo() {
                 allowFullScreen
               ></iframe>
             </div>
-            {/* Video 5 */}
-            <div className="video">
-              <iframe 
-                width="560" 
-                height="315" 
-                src=""  
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
+           </div>
           <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
           
         </motion.div>
@@ -236,7 +224,7 @@ export default function Cuerpo() {
 
                 {/* UBICACIÓN */}
                 {audioCategory === "ubicacion" && (
-                    <button onClick={() => handlePlayPause("./audio/SaltoTabay/UbicacionSaltoTabay.mp3")}>
+                    <button onClick={() => handlePlayPause("./audio/ParroquiaCristoR/UbicacionParroquiaCR.mp3")}>
                       {isPlaying && currentAudio.includes("Ubicación") ? "⏸" : "▶"} Ubicación.
                     </button>
                 )}

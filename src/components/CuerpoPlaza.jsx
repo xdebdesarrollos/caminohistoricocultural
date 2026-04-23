@@ -198,6 +198,18 @@ export default function Cuerpo() {
                 allowFullScreen
               ></iframe>
             </div>
+             {/* Video 6 */}
+            <div className="video">
+              <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/vhjnKoyVc10"  
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
           <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
           
