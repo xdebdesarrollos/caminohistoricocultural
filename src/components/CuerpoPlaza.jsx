@@ -41,6 +41,7 @@ export default function Cuerpo() {
     "./images/PlazaColon/img14.jpg",
     "./images/PlazaColon/img15.jpg",
     "./images/PlazaColon/img16.jpg",
+    "./images/PlazaColon/2025DomingoCultural.jpg",
   ];
 
   useEffect(() => {

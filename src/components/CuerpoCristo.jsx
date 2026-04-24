@@ -14,7 +14,8 @@ export default function Cuerpo() {
   const images = [
     "./images/CristoDeLaAmistad/img000.jpg",
     "./images/CristoDeLaAmistad/img001.jpg",
-    "./images/CristoDeLaAmistad/img002.jpg",    
+    "./images/CristoDeLaAmistad/img002.jpg",   
+    "./images/CristoDeLaAmistad/img003.jpg", 
     "./images/CristoDeLaAmistad/img1.jpg",
     "./images/CristoDeLaAmistad/img2.jpg",
     "./images/CristoDeLaAmistad/img3.jpg",
@@ -209,28 +210,28 @@ export default function Cuerpo() {
 
                 {/* HISTORIA */}
                 {audioCategory === "historia" && (
-                  <button onClick={() => handlePlayPause("./audio/SaltoTabay/HistoriaSaltoTabay.mp3")}>
+                  <button onClick={() => handlePlayPause("./audio/CristoDeLaAmistad/HistoriaCristoAmistad.mp3")}>
                     {isPlaying && currentAudio.includes("Historia") ? "⏸" : "▶"} Historia Cristo de la amistad.
                   </button>
                 )}
 
                 {/* CULTURA */}
                 {audioCategory === "cultura" && (
-                  <button onClick={() => handlePlayPause("./audio/SaltoTabay/CulturaSaltoTabay.mp3")}>
+                  <button onClick={() => handlePlayPause("./audio/CristoDeLaAmistad/CulturaCristoAmistad.mp3")}>
                     {isPlaying && currentAudio.includes("Cultura") ? "⏸" : "▶"} Cultura y Tradición
                   </button>
                 )}
 
                 {/* DESCRIPCIÓN */}
                 {audioCategory === "descripcion" && (
-                    <button onClick={() => handlePlayPause("./audio/SaltoTabay/DescripcionSaltoTabay.mp3")}>
+                    <button onClick={() => handlePlayPause("./audio/CristoDeLaAmistad/DescripcionCristoAmistad.mp3")}>
                     {isPlaying && currentAudio.includes("Descripción") ? "⏸" : "▶"} Descripción del Cristo.
                     </button>
                 )}
 
                 {/* UBICACIÓN */}
                 {audioCategory === "ubicacion" && (
-                    <button onClick={() => handlePlayPause("./audio/SaltoTabay/UbicacionSaltoTabay.mp3")}>
+                    <button onClick={() => handlePlayPause("./audio/CristoDeLaAmistad/UbicacionCristoAmistad.mp3")}>
                       {isPlaying && currentAudio.includes("Ubicación") ? "⏸" : "▶"} Ubicación y Acceso
                     </button>
                 )}

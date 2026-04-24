@@ -41,6 +41,11 @@ export default function Cuerpo() {
         "./images/SaltosTabay/Salto23.JPG",
         "./images/SaltosTabay/Salto24.JPG",
         "./images/SaltosTabay/Salto25.JPG",
+        "./images/SaltosTabay/Turista1997.jpg",
+        "./images/SaltosTabay/Turista1997Mereles.jpg",
+        "./images/SaltosTabay/Penias2025.jpg",
+        "./images/SaltosTabay/Turista2024.jpg",
+        "./images/SaltosTabay/Turista2026.jpg",
   ];
 
   useEffect(() => {

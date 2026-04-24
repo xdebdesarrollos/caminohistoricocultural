@@ -32,7 +32,7 @@ const creditosData = [
     nombre: "Contenido y Producción Multimedial",
     rol: "Diseño en Gral.",
     descripcion:
-      "Producción de Textos, Creación de videos, fotografías y material sonoro para cada estación cultural. Videos Youtube canal Sr. Cuenca José María, Estudiante de Diseño Gráfico Benitez Fiorela Alejandra, Prof. Nivel inicial Maidana Araujo Jesica Alejandra.",
+      "Producción de Textos, Creación de videos, fotografías y material sonoro para cada estación cultural. Videos Youtube canal Sr. Cuenca José María, Estudiante de Diseño Gráfico Benitez Fiorela Alejandra, Prof. Nivel inicial Maidana Araujo Jesica Alejandra. Sr. Arrieta Arnaldo Ariel, brindando material fotográfico e informacion de la web www.alboradadeunpueblo.com.ar",
   },
   {
     nombre: "Comunidad de Jardín América",
