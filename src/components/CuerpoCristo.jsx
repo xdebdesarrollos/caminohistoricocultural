@@ -12,17 +12,18 @@ export default function Cuerpo() {
   const audioRef = useRef(null);
 
   const images = [
-    "./images/CristoDeLaAmistad/img000.jpg",
-    "./images/CristoDeLaAmistad/img001.jpg",
-    "./images/CristoDeLaAmistad/img002.jpg",   
-    "./images/CristoDeLaAmistad/img003.jpg", 
-    "./images/CristoDeLaAmistad/img1.jpg",
-    "./images/CristoDeLaAmistad/img2.jpg",
-    "./images/CristoDeLaAmistad/img3.jpg",
-    "./images/CristoDeLaAmistad/img4.jpg",
-    "./images/CristoDeLaAmistad/img5.jpg",
-    "./images/CristoDeLaAmistad/img6.jpg",
-    "./images/CristoDeLaAmistad/img7.jpg",
+    { src: "./images/CristoDeLaAmistad/img000.jpg", descripcion: "Primer Cristo 1998" },
+    { src: "./images/CristoDeLaAmistad/img001.jpg", descripcion: "Primer Cristo 1998" },
+    { src: "./images/CristoDeLaAmistad/img003.jpg", descripcion: "Mantenimiento 2012" },
+    { src: "./images/CristoDeLaAmistad/img002.jpg", descripcion: "Mantenimiento 2012" },
+    { src: "./images/CristoDeLaAmistad/img004.JPG", descripcion: "Mantenimiento 2012" },
+    { src: "./images/CristoDeLaAmistad/img1.jpg", descripcion: "Restauración 2020" },
+    { src: "./images/CristoDeLaAmistad/img2.jpg", descripcion: "Restauración 2020" },
+    { src: "./images/CristoDeLaAmistad/img3.jpg", descripcion: "Cristo 2026" },
+    { src: "./images/CristoDeLaAmistad/img4.jpg", descripcion: "Cristo 2026" },
+    { src: "./images/CristoDeLaAmistad/img5.jpg", descripcion: "Cristo 2026" },
+    { src: "./images/CristoDeLaAmistad/img6.jpg", descripcion: "Cristo 2026" },
+    { src: "./images/CristoDeLaAmistad/img7.jpg", descripcion: "Cristo 2026" },
   ];
 
   useEffect(() => {
@@ -100,7 +101,16 @@ export default function Cuerpo() {
             <h2 style={{ color: "black", textAlign: "center" }}>Galería de imágenes</h2>
             <div className="carousel-container">
               <button className="carousel-btn prev" onClick={handlePrevImage}>❮</button>
-              <img src={images[currentImage]} alt="" className="carousel-image" />
+              <div>
+                  <img
+                    src={images[currentImage].src}
+                    alt={images[currentImage].descripcion}
+                    className="carousel-image"
+                  />
+                  <p className="descripcion-imagen">
+                    {images[currentImage].descripcion}
+                  </p>
+                </div>
               <button className="carousel-btn next" onClick={handleNextImage}>❯</button>
             </div>
                       <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
