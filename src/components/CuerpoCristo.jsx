@@ -121,66 +121,19 @@ export default function Cuerpo() {
         >
           <h2 style={{ color: "black", textAlign: "center" }}>Disfruta de estos videos sobre el Cristo de la Amistad</h2>
           <div className="video-container">
+            <div><h2>EN CONSTRUCCIÓN...</h2></div>
             {/* Video 1 */}
             <div className="video">
                 <iframe 
                   width="560" 
                   height="315" 
-                  src="https://www.youtube.com/embed/dZMe4K4-gRA"
+                  src=""
                   title="YouTube video player" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowFullScreen
                 ></iframe>
               </div>
-            {/* Video 2 */}
-            <div className="video">
-              <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/e-QmTZxi0l8"
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-            {/* Video 3 */}
-            <div className="video">
-              <iframe 
-                width="560" 
-                height="315" 
-                src=""
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-            {/* Video 4 */}
-            <div className="video">
-              <iframe 
-                width="560" 
-                height="315" 
-                src=""    
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-            {/* Video 5 */}
-            <div className="video">
-              <iframe 
-                width="560" 
-                height="315" 
-                src=""  
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
           </div>
           <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
           
