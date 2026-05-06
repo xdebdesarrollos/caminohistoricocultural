@@ -12,43 +12,43 @@ export default function Cuerpo() {
   const audioRef = useRef(null);
 
   const images = [
-"./images/SaltosTabay/Salto001.jpg",
-        "./images/SaltosTabay/Salto002.jpg",
-        "./images/SaltosTabay/Salto003.jpg",
-        "./images/SaltosTabay/Salto004.jpg",
-        "./images/SaltosTabay/Salto005.jpg",
-        "./images/SaltosTabay/Salto2.jpg",
-        "./images/SaltosTabay/Salto3.jpg",
-        "./images/SaltosTabay/Salto4.jpg",
-        "./images/SaltosTabay/Salto5.jpg",
-        "./images/SaltosTabay/Salto6.jpg",
-        "./images/SaltosTabay/salto7.jpg",
-        "./images/SaltosTabay/Salto8.jpg",
-        "./images/SaltosTabay/Salto9.jpg",
-        "./images/SaltosTabay/Salto10.jpg",
-        "./images/SaltosTabay/Salto11.jpg",
-        "./images/SaltosTabay/Salto12.jpg",
-        "./images/SaltosTabay/salto13.jpg",
-        "./images/SaltosTabay/salto14.jpg",
-        "./images/SaltosTabay/Salto15.jpg",
-        "./images/SaltosTabay/Salto16.jpg",
-        "./images/SaltosTabay/Salto17.jpg",
-        "./images/SaltosTabay/Salto18.JPG",
-        "./images/SaltosTabay/Salto19.JPG",
-        "./images/SaltosTabay/Salto20.JPG",
-        "./images/SaltosTabay/Salto21.JPG",
-        "./images/SaltosTabay/Salto22.JPG",
-        "./images/SaltosTabay/Salto23.JPG",
-        "./images/SaltosTabay/Salto24.JPG",
-        "./images/SaltosTabay/Salto25.JPG",
-        "./images/SaltosTabay/Turista1997.jpg",
-        "./images/SaltosTabay/Turista1997Mereles.jpg",
-        "./images/SaltosTabay/Penias2025.jpg",
-        "./images/SaltosTabay/Penias2026.jpg",
-        "./images/SaltosTabay/Turista2024.jpg",
-        "./images/SaltosTabay/Turista2026.jpg",
-        "./images/SaltosTabay/DeporteSalto01.jpeg",
-        "./images/SaltosTabay/DeporteSalto02.jpeg",
+    { src: "./images/SaltosTabay/Salto001.jpg", descripcion: "Década del 50" },
+    { src: "./images/SaltosTabay/Salto002.jpg", descripcion: "Ingreso Década del 60" },
+    { src: "./images/SaltosTabay/Salto003.jpg", descripcion: "Construcción Pileta década del 60" },
+    { src: "./images/SaltosTabay/Salto004.jpg", descripcion: "Proveduría Década del 90" },
+    { src: "./images/SaltosTabay/Salto005.jpg", descripcion: "Ingreso Década del 90" },
+    { src: "./images/SaltosTabay/Salto2.jpg", descripcion: "Arroyo crecido con desborde" },
+    { src: "./images/SaltosTabay/Salto3.jpg", descripcion: "Arroyo crecido con desborde" },
+    { src: "./images/SaltosTabay/Salto4.jpg", descripcion: "Cascadas" }, 
+    { src: "./images/SaltosTabay/Salto5.jpg", descripcion: "Cascadas" }, 
+    { src: "./images/SaltosTabay/Salto6.jpg", descripcion: "Cascadas" }, 
+    { src: "./images/SaltosTabay/salto7.jpg", descripcion: "Cascadas" }, 
+    { src: "./images/SaltosTabay/Salto8.jpg", descripcion: "Mirador Cascadas" }, 
+    { src: "./images/SaltosTabay/Salto9.jpg", descripcion: "Mirador Cascadas" }, 
+    { src: "./images/SaltosTabay/Salto10.jpg", descripcion: "Mirador Cascadas" }, 
+    { src: "./images/SaltosTabay/Salto11.jpg", descripcion: "Cascadas gran caudal" },
+    { src: "./images/SaltosTabay/Salto12.jpg", descripcion: "Cascadas gran caudal" },
+    { src: "./images/SaltosTabay/salto13.jpg", descripcion: "Sillón Descanso" },
+    { src: "./images/SaltosTabay/salto14.jpg", descripcion: "Pileta" },  
+    { src: "./images/SaltosTabay/Salto15.jpg", descripcion: "Zona picnic" }, 
+    { src: "./images/SaltosTabay/Salto16.jpg", descripcion: "Zona Picnic" },
+    { src: "./images/SaltosTabay/Salto17.jpg", descripcion: "Pileta" },  
+    { src: "./images/SaltosTabay/Salto18.JPG", descripcion: "Acceso 2025" }, 
+    { src: "./images/SaltosTabay/Salto19.JPG", descripcion: "Acceso 2025" }, 
+    { src: "./images/SaltosTabay/Salto20.JPG", descripcion: "Cascadas" }, 
+    { src: "./images/SaltosTabay/Salto21.JPG", descripcion: "Quinchos" }, 
+    { src: "./images/SaltosTabay/Salto22.JPG", descripcion: "Puente Pileta" }, 
+    { src: "./images/SaltosTabay/Salto23.JPG", descripcion: "Zona Picnic" }, 
+    { src: "./images/SaltosTabay/Salto24.JPG", descripcion: "Ingreso Rta 12" }, 
+    { src: "./images/SaltosTabay/Salto25.JPG", descripcion: "Cascadas" }, 
+    { src: "./images/SaltosTabay/Turista1997.jpg", descripcion: "Fiesta del Turista 1997" }, 
+    { src: "./images/SaltosTabay/Turista1997Mereles.jpg", descripcion: "Fiesta del Turista 1997" },
+    { src: "./images/SaltosTabay/Penias2025.jpg", descripcion: "Peña Verano 2025" },
+    { src: "./images/SaltosTabay/Penias2026.jpg", descripcion: "Peña Verano 2026" },
+    { src: "./images/SaltosTabay/Turista2024.jpg", descripcion: "Fiesta del Turista 2024" },
+    { src: "./images/SaltosTabay/Turista2026.jpg", descripcion: "Fiesta del Turista 2026" },
+    { src: "./images/SaltosTabay/DeporteSalto01.jpeg", descripcion: "Deportes en el Salto" },
+    { src: "./images/SaltosTabay/DeporteSalto02.jpeg", descripcion: "Deportes en el Salto" },
   ];
 
   useEffect(() => {
@@ -125,7 +125,16 @@ export default function Cuerpo() {
             <h2 style={{ color: "black", textAlign: "center" }}>Galería de imágenes</h2>
             <div className="carousel-container">
               <button className="carousel-btn prev" onClick={handlePrevImage}>❮</button>
-              <img src={images[currentImage]} alt="" className="carousel-image" />
+              <div>
+                  <img
+                    src={images[currentImage].src}
+                    alt={images[currentImage].descripcion}
+                    className="carousel-image"
+                  />
+                  <p className="descripcion-imagen">
+                    {images[currentImage].descripcion}
+                  </p>
+                </div>
               <button className="carousel-btn next" onClick={handleNextImage}>❯</button>
             </div>
                       <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
