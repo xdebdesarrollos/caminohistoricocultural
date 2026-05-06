@@ -482,7 +482,12 @@ main {
       z-index: 10;
       border-radius: 50%;
     }
-
+    .descripcion-imagen {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 40px;
+      color: #333;
+    }
     .carousel-btn.prev {
       left: 10px;
     }

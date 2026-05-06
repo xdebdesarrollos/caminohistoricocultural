@@ -26,19 +26,19 @@ const creditosData = [
     nombre: "Investigadores locales",
     rol: "Investigación histórica",
     descripcion:
-      "Aporte de relatos, documentos y memoria histórica de la ciudad. Sr. Cuenca José María",
+      "Aporte de relatos, documentos y memoria histórica de la ciudad. Sr. Cuenca José María. Laura Kachorroski (Enciclopedia Jardinense), Documentos y fotografías Villaverde Angel(Papi)",
   },
   {
     nombre: "Contenido y Producción Multimedial",
     rol: "Diseño en Gral.",
     descripcion:
-      "Producción de Textos, Creación de videos, fotografías y material sonoro para cada estación cultural. Videos Youtube canal Sr. Cuenca José María, Estudiante de Diseño Gráfico Benitez Fiorela Alejandra, Prof. Nivel inicial Maidana Araujo Jesica Alejandra. Sr. Arrieta Arnaldo Ariel, brindando material fotográfico e informacion de la web www.alboradadeunpueblo.com.ar",
+      "Producción de Textos, Creación de videos, fotografías y material sonoro para cada estación cultural. Videos Canal Youtube Sr. Cuenca José María, Estudiante de Diseño Gráfico Benitez Fiorela Alejandra, Prof. Nivel inicial Maidana Araujo Jesica Alejandra. Sr. Arrieta Arnaldo Ariel, brindando material fotográfico e informacion de la web www.alboradadeunpueblo.com.ar",
   },
   {
     nombre: "Comunidad de Jardín América",
     rol: "Participación ciudadana",
     descripcion:
-      "Vecinos que contribuyeron con historias, recuerdos y testimonios. Hijos y nietos de Pioneros, Flia. Benitez Antonio Eleodoro y Sra. Silveira Teresa Beatriz, Directora/Docente Moraiz Graciela.",
+      "Vecinos que contribuyeron con historias, recuerdos y testimonios. Hijos y nietos de Pioneros, Flia. Benitez Antonio Eleodoro y Sra. Silveira Teresa Beatriz, Flia. Villaverde Angel(Papi), Directora/Docente Moraiz Graciela.",
   },
 ];
 

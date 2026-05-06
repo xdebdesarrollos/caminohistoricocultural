@@ -12,36 +12,39 @@ export default function Cuerpo() {
   const audioRef = useRef(null);
 
   const images = [
-    "./images/PlazaColon/IntendJorgeMachon.jpg",
-    "./images/PlazaColon/ConstrucciónPlazacolon.jpg",
-    "./images/PlazaColon/PrimeraEtapa.jpg",
-    "./images/PlazaColon/SegundaEtapa.jpg",
-    "./images/PlazaColon/1966.jpg",
-    "./images/PlazaColon/barquito.jpg",
-    "./images/PlazaColon/VistaAerea.jpg",
-    "./images/PlazaColon/Plaza3.jpg",
-    "./images/PlazaColon/Plaza4.jpg",
-    "./images/PlazaColon/Aerea01.jpg",
-    "./images/PlazaColon/Aerea02.jpg",
-    "./images/PlazaColon/Aerea03.jpg",
-    "./images/PlazaColon/Aerea04.jpg",
-    "./images/PlazaColon/img1.jpg",
-    "./images/PlazaColon/img2.jpg",
-    "./images/PlazaColon/img3.jpg",
-    "./images/PlazaColon/img4.jpg",
-    "./images/PlazaColon/img5.jpg",
-    "./images/PlazaColon/img6.jpg",
-    "./images/PlazaColon/img7.jpg",
-    "./images/PlazaColon/img8.jpg",
-    "./images/PlazaColon/img9.jpg",
-    "./images/PlazaColon/img10.jpg",
-    "./images/PlazaColon/img11.jpg",
-    "./images/PlazaColon/img12.jpg",
-    "./images/PlazaColon/img13.jpg",
-    "./images/PlazaColon/img14.jpg",
-    "./images/PlazaColon/img15.jpg",
-    "./images/PlazaColon/img16.jpg",
-    "./images/PlazaColon/2025DomingoCultural.jpg",
+{ src: "./images/PlazaColon/IntendJorgeMachon.jpg", descripcion: "Intendente Jorge Machón construcción Plaza Colón" },
+    { src: "./images/PlazaColon/ConstrucciónPlazacolon.jpg", descripcion: "Construcción de la Plaza Colón" },
+    { src: "./images/PlazaColon/PrimeraEtapa.jpg", descripcion: "Primera etapa de la plaza" },
+    { src: "./images/PlazaColon/SegundaEtapa.jpg", descripcion: "Segunda etapa de construcción" },
+    { src: "./images/PlazaColon/1966.jpg", descripcion: "Vista histórica 1966" },
+    { src: "./images/PlazaColon/PlazaColonLugo1.jpg", descripcion: "Músico Sr Lugo y banda, Anfiteatro" },
+    { src: "./images/PlazaColon/PlazaColonLugo2.jpg", descripcion: "Músico Sr Lugo y banda, Anfiteatro" },
+    { src: "./images/PlazaColon/barquito.jpg", descripcion: "Tradicional barquito de la plaza" },
+    { src: "./images/PlazaColon/VistaAerea.jpg", descripcion: "Vista aérea de la Plaza Colón" },
+    { src: "./images/PlazaColon/Plaza3.jpg", descripcion: "Vista general de la plaza" },
+    { src: "./images/PlazaColon/Plaza4.jpg", descripcion: "Otra perspectiva de la plaza" },
+    { src: "./images/PlazaColon/Aerea01.jpg", descripcion: "Vista aérea 01" },
+    { src: "./images/PlazaColon/Aerea02.jpg", descripcion: "Vista aérea 02" },
+    { src: "./images/PlazaColon/Aerea03.jpg", descripcion: "Vista aérea 03" },
+    { src: "./images/PlazaColon/Aerea04.jpg", descripcion: "Vista aérea Nocturna" },
+    { src: "./images/PlazaColon/img1.jpg", descripcion: "Vista al Este" },
+    { src: "./images/PlazaColon/img2.jpg", descripcion: "Fuente por la noche" },
+    { src: "./images/PlazaColon/img3.jpg", descripcion: "Vista al Este Parroquia Cristo Redentor" },
+    { src: "./images/PlazaColon/img4.jpg", descripcion: "Letras Corpóreas" },
+    { src: "./images/PlazaColon/img5.jpg", descripcion: "Vista al Sur" },
+    { src: "./images/PlazaColon/img6.jpg", descripcion: "Atardecer Anfiteatro" },
+    { src: "./images/PlazaColon/img7.jpg", descripcion: "Vista al centro" },
+    { src: "./images/PlazaColon/img8.jpg", descripcion: "Atardecer" },
+    { src: "./images/PlazaColon/img9.jpg", descripcion: "Domingo Cultural en Anfiteatro" },
+    { src: "./images/PlazaColon/img10.jpg", descripcion: "El Futuro" },
+    { src: "./images/PlazaColon/img11.jpg", descripcion: "Descubrimiento América" },
+    { src: "./images/PlazaColon/img12.jpg", descripcion: "Colonización Jesuita" },
+    { src: "./images/PlazaColon/img13.jpg", descripcion: "Independencia Argentina" },
+    { src: "./images/PlazaColon/img14.jpg", descripcion: "Busto San Martín" },
+    { src: "./images/PlazaColon/img15.jpg", descripcion: "Monumento Biblia" },
+    { src: "./images/PlazaColon/img16.jpg", descripcion: "Monumento a la Madre" },
+    { src: "./images/PlazaColon/img17.jpg", descripcion: "Acto central 2025" },
+    { src: "./images/PlazaColon/2025DomingoCultural.jpg", descripcion: "Domingo Cultural 2025" },
   ];
 
   useEffect(() => {
@@ -118,15 +121,23 @@ export default function Cuerpo() {
             <h2 style={{ color: "black", textAlign: "center" }}>Galería de imágenes</h2>
             <div className="carousel-container">
               <button className="carousel-btn prev" onClick={handlePrevImage}>❮</button>
-              <img src={images[currentImage]} alt="" className="carousel-image" />
+               <div>
+                  <img
+                    src={images[currentImage].src}
+                    alt={images[currentImage].descripcion}
+                    className="carousel-image"
+                  />
+                  <p className="descripcion-imagen">
+                    {images[currentImage].descripcion}
+                  </p>
+                </div>
               <button className="carousel-btn next" onClick={handleNextImage}>❯</button>
             </div>
                       <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
           </motion.div>
         )}
 
-        {/* ================== VIDEOS ================== */}
-{/* Sección de Videos */}
+      {/* ================== VIDEOS ================== */}
       {activeSection === "video" && (
         <motion.div
           key="video"
