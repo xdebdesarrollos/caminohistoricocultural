@@ -12,23 +12,25 @@ export default function Cuerpo() {
   const audioRef = useRef(null);
 
   const images = [
-    "./images/ParroquiaCristoRedentor/cr01.JPG",
-    "./images/ParroquiaCristoRedentor/cr02.JPG",
-    "./images/ParroquiaCristoRedentor/cr03.JPG",
-    "./images/ParroquiaCristoRedentor/img0.jpg",
-    "./images/ParroquiaCristoRedentor/img1.jpg",
-    "./images/ParroquiaCristoRedentor/img2.jpg",
-    "./images/ParroquiaCristoRedentor/img3.jpg",
-    "./images/ParroquiaCristoRedentor/img4.jpg",
-    "./images/ParroquiaCristoRedentor/img5.jpg",
-    "./images/ParroquiaCristoRedentor/img6.jpg",
-    "./images/ParroquiaCristoRedentor/img7.jpg",
-    "./images/ParroquiaCristoRedentor/img8.jpg",
-    "./images/ParroquiaCristoRedentor/img9.JPG",
-    "./images/ParroquiaCristoRedentor/img10.JPG",
-    "./images/ParroquiaCristoRedentor/img11.JPG",
-    "./images/ParroquiaCristoRedentor/img12.JPG",
-    "./images/ParroquiaCristoRedentor/img13.jpg",
+    { src: "./images/ParroquiaCristoRedentor/cr01.JPG", descripcion: "Primeras Construcciones década 50" },
+    { src: "./images/ParroquiaCristoRedentor/cr02.JPG", descripcion: "Reformas década 50" },
+    { src: "./images/ParroquiaCristoRedentor/cr03.JPG", descripcion: "Vista Aerea década 60" },
+    { src: "./images/ParroquiaCristoRedentor/img.jpg", descripcion: "Año 2000" },
+    { src: "./images/ParroquiaCristoRedentor/img0.JPG", descripcion: "Año 2025" },
+    { src: "./images/ParroquiaCristoRedentor/img1.jpg", descripcion: "Año 2025" },
+    { src: "./images/ParroquiaCristoRedentor/img2.jpg", descripcion: "Año 2025" },
+    { src: "./images/ParroquiaCristoRedentor/img3.jpg", descripcion: "Año 2025" },
+    { src: "./images/ParroquiaCristoRedentor/img4.jpg", descripcion: "Interior Vitrales" },
+    { src: "./images/ParroquiaCristoRedentor/img5.jpg", descripcion: "Interior Vitrales" },
+    { src: "./images/ParroquiaCristoRedentor/img6.jpg", descripcion: "Interior Vitrales" },
+    { src: "./images/ParroquiaCristoRedentor/img7.jpg", descripcion: "Interior Vitrales" },
+    { src: "./images/ParroquiaCristoRedentor/img8.jpg", descripcion: "Interior Vitrales" },
+    { src: "./images/ParroquiaCristoRedentor/img9.JPG", descripcion: "Interior Vitrales" },
+    { src: "./images/ParroquiaCristoRedentor/img10.JPG", descripcion: "Interior Vitrales" },
+    { src: "./images/ParroquiaCristoRedentor/img11.JPG", descripcion: "Interior Vitrales" },
+    { src: "./images/ParroquiaCristoRedentor/img12.JPG", descripcion: "Interior Vitrales" },
+    { src: "./images/ParroquiaCristoRedentor/img13.jpg", descripcion: "Altar Cristo" },
+    { src: "./images/ParroquiaCristoRedentor/img14.jpg", descripcion: "Domingo Misa" },
   ];
 
   useEffect(() => {
@@ -105,7 +107,16 @@ export default function Cuerpo() {
             <h2 style={{ color: "black", textAlign: "center" }}>Galería de imágenes</h2>
             <div className="carousel-container">
               <button className="carousel-btn prev" onClick={handlePrevImage}>❮</button>
-              <img src={images[currentImage]} alt="" className="carousel-image" />
+              <div>
+                  <img
+                    src={images[currentImage].src}
+                    alt={images[currentImage].descripcion}
+                    className="carousel-image"
+                  />
+                  <p className="descripcion-imagen">
+                    {images[currentImage].descripcion}
+                  </p>
+                </div>
               <button className="carousel-btn next" onClick={handleNextImage}>❯</button>
             </div>
                       <div className="btn"><button className="close-btn" onClick={() => setActiveSection(null)}>❌ Ocultar</button></div>
