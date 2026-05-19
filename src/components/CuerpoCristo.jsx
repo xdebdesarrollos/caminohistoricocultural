@@ -131,13 +131,13 @@ export default function Cuerpo() {
         >
           <h2 style={{ color: "black", textAlign: "center" }}>Disfruta de estos videos sobre el Cristo de la Amistad</h2>
           <div className="video-container">
-            <div><h2>EN CONSTRUCCIÓN...</h2></div>
+            
             {/* Video 1 */}
             <div className="video">
                 <iframe 
                   width="560" 
                   height="315" 
-                  src=""
+                  src="https://www.youtube.com/embed/F1hERiKvW84"
                   title="YouTube video player" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
